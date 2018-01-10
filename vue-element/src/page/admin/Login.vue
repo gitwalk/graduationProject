@@ -45,7 +45,7 @@
 <!--<script src="/static/js/EasePack.min.js"></script>-->
 <!--<script src="/static/js/rAF.js"></script>-->
 <!--<script src="../../../static/js/demo-1.js"></script>-->
-<style scoped>
+<style >
   @import "../../../static/css/normalize.css";
   @import "../../../static/css/demo.css";
   @import "../../../static/css/component.css";
