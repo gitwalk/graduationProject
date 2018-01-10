@@ -24,10 +24,10 @@ a:hover, a:focus {
 	color: #34495e;
 }
 
-section {
-	padding: 1em;
-	text-align: center;
-}
+/*section {*/
+	/*padding: 1em;*/
+	/*text-align: center;*/
+/*}*/
 
 p.ref {
 	text-align: center;
