@@ -1,7 +1,7 @@
 
 //用户信息统计
 <template>
-  <div>
+  <div style="height:603.6px;width: 1266px">
     <!----------------------------------导航栏--------------------------------------------------------------------->
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
@@ -52,7 +52,9 @@
     export default {
         name: "user-informstatistics",
       methods:{
-
+        onSubmit() {
+          console.log('submit!');
+        }
       },
       data() {
         return {

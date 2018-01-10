@@ -1,11 +1,12 @@
 //管理界面
 <template>
-      <el-container style="height: 730px;background-color:#2E363F;">
-        <el-header height="12%" style="background-color:black">
+
+      <el-container class="wrapper" style="background-color:#2E363F;">
+        <el-header height="90px" style="background-color:black">
           <mheader></mheader>
         </el-header>
         <el-container >
-          <el-aside width="15%" >
+          <el-aside width="230px" >
             <sidebar></sidebar>
           </el-aside >
           <el-main style="background-color:white;">
@@ -29,5 +30,7 @@
 </script>
 
 <style scoped>
-
+  .wrapper{
+    height: 100%;
+  }
 </style>

@@ -1,6 +1,6 @@
 //用户信息管理
 <template>
-  <div>
+  <div style="height:603.6px;width: 1266px">
     <!----------------------------------导航栏--------------------------------------------------------------------->
   <el-breadcrumb separator-class="el-icon-arrow-right">
     <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
@@ -20,7 +20,7 @@
         </el-date-picker>
       </el-form-item>
       <el-form-item label="电子邮件" >
-        <el-input v-model="formInline.user" placeholder="电子邮件" style="width: 200px"></el-input>
+        <el-input v-model="formInline.user" placeholder="电子邮件" style="width: 190px"></el-input>
       </el-form-item>
       <el-form-item label="用户状态" >
         <el-select v-model="formInline.region" placeholder="状态" style="width: 100px">
@@ -34,7 +34,7 @@
     </el-form>
 
 <!--------------------------------------------表格------------------------------------------------------------------->
-  <el-table :data="tableData" style="width: 90%;margin-left: 5%;height:416.8px">
+  <el-table :data="tableData" style="width: 90%;margin-left: 5%;height:70%;">
     <el-table-column label="注册日期" width="180">
       <template slot-scope="scope">
         <i class="el-icon-time"></i>
