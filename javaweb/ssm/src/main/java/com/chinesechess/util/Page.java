@@ -2,35 +2,45 @@ package com.chinesechess.util;
 
 public class Page {
 
-    int start=0;
-    int count = 2;
-    int last = 0;
-    public int getStart() {
-        return start;
+    //表示当前页码
+    int pageNum=0;
+    //表示当前每页的条数
+    int count = 0;
+    //表示页总数量
+    int pages=0;
+    //表示记录总数量
+    long pagetotal=0;
+
+
+    public int getPageNum() {
+        return pageNum;
     }
-    public void setStart(int start) {
-        this.start = start;
+
+    public void setPageNum(int pageNum) {
+        this.pageNum = pageNum;
     }
+
     public int getCount() {
         return count;
     }
+
     public void setCount(int count) {
         this.count = count;
     }
-    public int getLast() {
-        return last;
-    }
-    public void setLast(int last) {
-        this.last = last;
+
+    public int getPages() {
+        return pages;
     }
 
-    public void caculateLast(int total) {
-        // 假设总数是50，是能够被5整除的，那么最后一页的开始就是45
-        if (0 == total % count)
-            last = total - count;
-            // 假设总数是51，不能够被5整除的，那么最后一页的开始就是50
-        else
-            last = total - total % count;
+    public void setPages(int pages) {
+        this.pages = pages;
     }
 
+    public long getPagetotal() {
+        return pagetotal;
+    }
+
+    public void setPagetotal(long pagetotal) {
+        this.pagetotal = pagetotal;
+    }
 }

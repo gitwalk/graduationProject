@@ -3,14 +3,15 @@ package com.chinesechess.pojo;
 
 public class UserInform {
 
-  private long id;
-  private String name;
-  private String password;
-  private String emailAddress;
-  private long role;
-  private long sex;
-  private java.sql.Timestamp registerTime;
-  private long isDeleted;
+  private long id=-1;
+  private String name=null;
+  private String password=null;
+  private String emailAddress=null;
+  private long role=-1;
+  private long sex=-1;
+  private java.sql.Timestamp registerTime=null;
+  private long isDeleted=-1;
+
 
 
   public long getId() {
@@ -84,4 +85,17 @@ public class UserInform {
     this.isDeleted = isDeleted;
   }
 
+  @Override
+  public String toString() {
+    return "UserInform{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", password='" + password + '\'' +
+            ", emailAddress='" + emailAddress + '\'' +
+            ", role=" + role +
+            ", sex=" + sex +
+            ", registerTime=" + registerTime +
+            ", isDeleted=" + isDeleted +
+            '}';
+  }
 }

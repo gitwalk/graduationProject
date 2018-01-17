@@ -3,9 +3,15 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App.vue'
 import router from './router/routers'
-
 import axios from 'axios'
+import {format} from "../static/js/timeTool.js"
+import {pagesHelp,updataInform} from "../static/js/pagesHelp.js"
+
 Vue.prototype.$axios = axios
+Vue.prototype.$pagesHelp=pagesHelp
+Vue.prototype.$updataInform=updataInform
+Vue.prototype.$timeFormat=format
+
 // import  "/static/js/TweenLite.min.js"
 // import "/static/js/EasePack.min.js"
 // import "/static/js/rAF.js"

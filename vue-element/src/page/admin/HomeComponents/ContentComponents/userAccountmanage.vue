@@ -34,35 +34,36 @@
     </el-form>
 
 <!--------------------------------------------表格------------------------------------------------------------------->
-  <el-table :data="tableData" style="width: 90%;margin-left: 5%;height:70%;">
-    <el-table-column label="注册日期" width="180">
+  <el-table :data="listUserInform1" style="width: 90%;margin-left: 5%;height:70%;">
+    <el-table-column label="注册日期" width="190px" align="center">
       <template slot-scope="scope">
         <i class="el-icon-time"></i>
-        <span style="margin-left: 10px">{{ scope.row.registerTime }}</span>
+        <span style="margin-left: 10px"> {{ scope.row.registerTime }}</span>
       </template>
     </el-table-column>
-    <el-table-column label="账号" width="180">
+    <el-table-column label="账号" width="180px" align="center">
       <template slot-scope="scope">
         <el-popover trigger="hover" placement="top">
           <p>性别: {{ scope.row.sex }}</p>
           <p>上线次数: {{ scope.row.loginNum }}次</p>
           <p>对局次数: {{ scope.row.gameNum }}次</p>
+          <input hidden :value="scope.row.id"/>
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium">{{ scope.row.name }}</el-tag>
           </div>
         </el-popover>
       </template>
     </el-table-column>
-    <el-table-column label="密码" width="180" >
-      <template slot-scope="scope">{{scope.row.Password}}</template>
+    <el-table-column label="密码" width="180px" >
+      <template slot-scope="scope">{{scope.row.password}}</template>
     </el-table-column>
-    <el-table-column label="电子邮件" width="180">
-      <template slot-scope="scope">{{scope.row.emailAdress}}</template>
+    <el-table-column label="电子邮件" width="180px" >
+      <template slot-scope="scope">{{scope.row.emailAddress}}</template>
     </el-table-column>
-    <el-table-column label="用户状态" width="180">
-      <template slot-scope="scope">{{scope.row.userState}}</template>
+    <el-table-column label="用户状态" width="180px" align="center">
+      <template slot-scope="scope">{{scope.row.isDeleted}}</template>
     </el-table-column>
-    <el-table-column label="操作">
+    <el-table-column label="操作" align="center">
       <template slot-scope="scope">
         <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
         <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">禁用</el-button>
@@ -72,8 +73,10 @@
 
 <!------------------------------------------------------分页条------------------------------------------------------>
     <el-row :gutter="24" style="margin-top: 2%">
-      <el-col :span="8" :offset="8">
-        <el-pagination  background layout="prev, pager, next" :total="1000" ></el-pagination>
+      <el-col :span="8" :offset="6">
+        <el-pagination    @current-change="handleCurrentChange" current-page.sync="pagesInform.pageNum"
+                         :page-size="pagesInform.count" background layout="total,prev, pager, next, jumper"
+                        :total="pagesInform.pagetotal" ></el-pagination>
       </el-col>
     </el-row>
 
@@ -81,10 +84,39 @@
 </template>
 
 <script>
+
+
+  function dealInfom(thisVue,response) {
+
+    for(var i in response.data[0]) {
+      //转换性别
+      if(response.data[0][i].sex=="0"){
+        response.data[0][i].sex="男";
+      }else if(response.data[0][i].sex=="1"){
+        response.data[0][i].sex="女";
+      }else if(response.data[0][i].sex=="2"){
+        response.data[0][i].sex="保密";
+      }
+      //转换状态
+      if(response.data[0][i].isDeleted=="0"){
+        response.data[0][i].isDeleted="正常";
+      }else{
+        response.data[0][i].isDeleted="禁用";
+      }
+
+      response.data[0][i].registerTime=thisVue.$timeFormat(response.data[0][i].registerTime,'yyyy-MM-dd HH:mm:ss');
+      console.log(response.data[0][i].sex)
+    }
+    response.data[1].pageNum++;
+    thisVue.listUserInform1=response.data[0];
+    thisVue.pagesInform=response.data[1];
+  }
     export default {
         name: "account-manage",
       data() {
         return {
+          listUserInform1:[],
+          pagesInform:[],
           pickerOptions2: {
             shortcuts: [{
               text: '最近一周',
@@ -184,12 +216,39 @@
           }]
         }
       },
+
+      mounted(){
+          this.$pagesHelp(this,7,0,"/listUserInform",dealInfom);
+      },
       methods: {
+        handleCurrentChange(val){
+
+          this.$pagesHelp(this,7,val,"/listUserInform",dealInfom);
+        },
         handleEdit(index, row) {
           console.log(index, row);
         },
         handleDelete(index, row) {
+          var thisVue=this;
           console.log(index, row);
+          var json={
+            "id":row.id,
+            "isDeleted":1,
+          }
+          this.$confirm('此操作将禁用该用户, 是否继续?', '提示', {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'warning'
+          }).then(() => {
+              thisVue.$updataInform(json,"/updateUserInfrom",this,thisVue);
+            console.log(thisVue.listUserInform1);
+              var a=1;
+          }).catch(() => {
+            this.$message({
+              type: 'info',
+              message: '已取消禁用'
+            });
+          });
         },
         onSubmit() {
 

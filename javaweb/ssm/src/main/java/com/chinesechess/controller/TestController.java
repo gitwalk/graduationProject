@@ -28,7 +28,7 @@ public class TestController {
     @RequestMapping("listTest")
     public ModelAndView listTest(Page page){
         ModelAndView mav = new ModelAndView();
-        PageHelper.offsetPage(page.getStart(),2);
+        PageHelper.offsetPage(page.getPageNum(),2);
         List<Test> cs= testService.list();
 
         // 放入转发参数

@@ -30,21 +30,21 @@
    import {demo1} from "../../../static/js/demo-1.js"
    import axios from 'axios';
 
-   var category={"name":"test","id":3};
-   var jsonData = JSON.stringify(category);
+   // var category={"name":"test","id":3};
+   // var jsonData = JSON.stringify(category);
    export default {
 
      methods: {
        submitForm(formName) {
 
-         this.$axios({
+        /* this.$axios({
            method: 'post',
            headers: {
              'Content-type': 'application/json'
            },
            url: 'http://127.0.0.1:8081/ssm/submitTest',
            data: jsonData
-         });
+         });*/
 
           const self = this;
           this.$router.push('/home')
