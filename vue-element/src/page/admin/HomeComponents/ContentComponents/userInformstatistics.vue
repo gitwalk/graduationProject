@@ -49,10 +49,12 @@
   </div>
 </template>
 <script>
+
     export default {
         name: "user-informstatistics",
       methods:{
         onSubmit() {
+
           console.log('submit!');
         }
       },

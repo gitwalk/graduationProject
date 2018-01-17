@@ -4,6 +4,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 import App from './App.vue'
 import router from './router/routers'
 
+import axios from 'axios'
+Vue.prototype.$axios = axios
 // import  "/static/js/TweenLite.min.js"
 // import "/static/js/EasePack.min.js"
 // import "/static/js/rAF.js"
@@ -22,6 +24,8 @@ import router from './router/routers'
 // import "../static/css/component.css";
 
 Vue.use(ElementUI)
+
+
 new Vue({
   el: '#app',
   router,

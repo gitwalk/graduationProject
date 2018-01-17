@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var proxy = require('http-proxy-middleware')
 
 module.exports = {
   entry: './src/main.js',
@@ -8,6 +9,7 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+
   module: {
     rules: [
       {
@@ -54,8 +56,19 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    noInfo: true,
-    overlay: true
+    hot: true,
+    inline: true,
+    progress: true,
+     port: 8080,
+     host: '127.0.0.1',
+    proxy: {
+      '/ssm': {
+        target: 'http://127.0.0.1:8081/ssm',
+        changeOrigin: true,
+        secure: false
+      }
+    }
+
   },
   performance: {
     hints: false

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>用AJAX以JSON方式获取数据</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+</head>
+<body>
+<input type="button" value="通过AJAX获取一个Hero对象---" id="sender">
+
+<div id="messageDiv"></div>
+
+<script>
+    $('#sender').click(function(){
+        var url="getOneTest";
+        $.post(
+            url,
+            function(data) {
+                var json=JSON.parse(data);
+                var name =json.Test.name;
+                var id = json.Test.id;
+                $("#messageDiv").html("分类id："+ id + "<br>分类名称:" +name );
+
+            });
+    });
+</script>
+</body>
+
+</body>
+</html>
