@@ -10,26 +10,32 @@
   </el-breadcrumb>
 
     <!---------------------------搜索栏---------------------------------------------------------------------->
-    <el-form  :inline="true" :model="formInline" class="demo-form-inline" style="margin-top: 3%;margin-left: 1%">
+    <el-form  ref="dynamicValidateForm" :inline="true" :model="dynamicValidateForm" class="demo-form-inline" style="margin-top: 3%;margin-left: 1%">
       <el-form-item label="账号">
-        <el-input v-model="formInline.user" placeholder="昵称" style="width: 200px"></el-input>
+        <el-input clearable v-model.trim="dynamicValidateForm.name" placeholder="昵称" style="width: 200px"></el-input>
       </el-form-item>
       <el-form-item label="注册时间" >
-        <el-date-picker  v-model="value7"  type="daterange" align="right" unlink-panels range-separator="至"
+        <el-date-picker value-format="yyyy-MM-dd HH:mm:ss"  v-model="pickerdata"  type="daterange" align="right" unlink-panels range-separator="至"
                          start-placeholder="开始日期" end-placeholder="结束日期" :picker-options="pickerOptions2">
         </el-date-picker>
       </el-form-item>
-      <el-form-item label="电子邮件" >
-        <el-input v-model="formInline.user" placeholder="电子邮件" style="width: 190px"></el-input>
+      <el-form-item label="电子邮件" prop="emailAddress" :rules="[
+          { type: 'email', message: '请输入正确的邮箱地址', trigger: 'blur,change' }
+          ]">
+        <el-autocomplete  :fetch-suggestions="querySearch"
+                          :trigger-on-focus="false"
+                         v-model.trim="dynamicValidateForm.emailAddress"
+                          placeholder="电子邮件" style="width: 190px"></el-autocomplete>
       </el-form-item>
       <el-form-item label="用户状态" >
-        <el-select v-model="formInline.region" placeholder="状态" style="width: 100px">
-          <el-option label="启用" value="0"></el-option>
+        <el-select  v-model="dynamicValidateForm.isDeleted" placeholder="状态" style="width: 100px">
+          <el-option label="——" value="-1"></el-option>
+          <el-option label="正常" value="0"></el-option>
           <el-option label="禁用" value="1"></el-option>
         </el-select>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">查询</el-button>
+        <el-button type="primary" @click="submitForm('dynamicValidateForm')">查询</el-button>
       </el-form-item>
     </el-form>
 
@@ -65,8 +71,8 @@
     </el-table-column>
     <el-table-column label="操作" align="center">
       <template slot-scope="scope">
-        <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-        <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">禁用</el-button>
+        <el-button v-if="scope.row.isDeleted==='禁用'" type="success" size="mini" @click="handleEnable(scope.$index, scope.row)">启用</el-button>
+        <el-button v-else size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">禁用</el-button>
       </template>
     </el-table-column>
   </el-table>
@@ -74,8 +80,10 @@
 <!------------------------------------------------------分页条------------------------------------------------------>
     <el-row :gutter="24" style="margin-top: 2%">
       <el-col :span="8" :offset="6">
-        <el-pagination    @current-change="handleCurrentChange" current-page.sync="pagesInform.pageNum"
-                         :page-size="pagesInform.count" background layout="total,prev, pager, next, jumper"
+        <el-pagination    @current-change="handleCurrentChange"
+                          :current-page.sync="pagesInform.pageNum"
+                         :page-size="pagesInform.count"
+                          background layout="total,prev, pager, next, jumper"
                         :total="pagesInform.pagetotal" ></el-pagination>
       </el-col>
     </el-row>
@@ -86,38 +94,17 @@
 <script>
 
 
-  function dealInfom(thisVue,response) {
-
-    for(var i in response.data[0]) {
-      //转换性别
-      if(response.data[0][i].sex=="0"){
-        response.data[0][i].sex="男";
-      }else if(response.data[0][i].sex=="1"){
-        response.data[0][i].sex="女";
-      }else if(response.data[0][i].sex=="2"){
-        response.data[0][i].sex="保密";
-      }
-      //转换状态
-      if(response.data[0][i].isDeleted=="0"){
-        response.data[0][i].isDeleted="正常";
-      }else{
-        response.data[0][i].isDeleted="禁用";
-      }
-
-      response.data[0][i].registerTime=thisVue.$timeFormat(response.data[0][i].registerTime,'yyyy-MM-dd HH:mm:ss');
-      console.log(response.data[0][i].sex)
-    }
-    response.data[1].pageNum++;
-    thisVue.listUserInform1=response.data[0];
-    thisVue.pagesInform=response.data[1];
-  }
     export default {
         name: "account-manage",
+
       data() {
         return {
           listUserInform1:[],
           pagesInform:[],
           pickerOptions2: {
+            disabledDate(time) {
+              return time.getTime() >= Date.now();
+            },
             shortcuts: [{
               text: '最近一周',
               onClick(picker) {
@@ -144,90 +131,84 @@
               }
             }]
           },
-          value6: '',
-          value7: '',
-          formInline: {
-            user: '',
-            region: ''
-          },
-          tableData: [{
-            registerTime: '2016-05-02',
-            name: 'a794922102',
-            sex: '男',
-            loginNum:'10',
-            gameNum:'20',
-            emailAdress:'123456@qq.com',
-            userState:'启用',
-            Password:'794952112'
-          }, {
-            registerTime: '2016-05-02',
-            name: '王小虎',
-            sex: '男',
-            loginNum:'10',
-            gameNum:'20',
-            emailAdress:'123456@qq.com',
-            userState:'启用',
-            Password:'794952112'
-          }, {
-            registerTime: '2016-05-02',
-            name: '王小虎',
-            sex: '男',
-            loginNum:'10',
-            gameNum:'20',
-            emailAdress:'123456@qq.com',
-            userState:'启用',
-            Password:'794952112'
-          }, {
-            registerTime: '2016-05-02',
-            name: '王小虎',
-            sex: '男',
-            loginNum:'10',
-            gameNum:'20',
-            emailAdress:'123456@qq.com',
-            userState:'启用',
-            Password:'794952112'
-          }, {
-            registerTime: '2016-05-02',
-            name: '王小虎',
-            sex: '男',
-            loginNum:'10',
-            gameNum:'20',
-            emailAdress:'123456@qq.com',
-            userState:'启用',
-            Password:'794952112'
-          }, {
-            registerTime: '2016-05-02',
-            name: '王小虎',
-            sex: '男',
-            loginNum:'10',
-            gameNum:'20',
-            emailAdress:'123456@qq.com',
-            userState:'启用',
-            Password:'794952112'
-          }, {
-            registerTime: '2016-05-02',
-            name: '王小虎',
-            sex: '男',
-            loginNum:'10',
-            gameNum:'20',
-            emailAdress:'123456@qq.com',
-            userState:'启用',
-            Password:'794952112'
-          }]
+          results:[],
+          pickerdata:'',
+          dynamicValidateForm: {
+            emailAddress: '',
+            name:'',
+            isDeleted:'-1',
+            starTime:'',
+            endTime:'',
+            page:''
+          }
+
         }
       },
-
       mounted(){
-          this.$pagesHelp(this,7,0,"/listUserInform",dealInfom);
+          /*初始化页面用户信息*/
+          this.$pagesHelp(this,7,1,"/listUserInform","dealInfom");
       },
       methods: {
+        /*邮箱匹配*/
+        querySearch(queryString, cb) {
+            var str1=queryString;
+            var str2="";
+            for(var i in queryString){
+              if(queryString[i]==="@"){
+                str1=queryString.substring(0,i);
+                str2=queryString.substring(i,queryString.length);
+                break;
+              }
+            }
+            this.results = this.loadAll();
+            var restaurants = this.results;
+
+            var results = str2 ? restaurants.filter(
+              this.createFilter(str2)) : restaurants;
+              for(var i in results){
+                  results[i].value=str1+results[i].value;
+              }
+            // 调用 callback 返回建议列表的数据
+            cb(results);
+        },
+        loadAll() {
+          return [
+            { "value": "@qq.com"},
+            { "value": "@gmail.com" },
+            { "value": "@163.com"},
+            { "value": "@163.net" },
+            { "value": "@googlemail.com"},
+            { "value": "@mail.com" },
+            { "value": "@yahoo.com"},
+            { "value": "@msn.com"},
+            { "value": "@hotmail.com"},
+            { "value": "@aol.com" },
+            { "value": "@ask.com"},
+            { "value": "@live.com" },
+          ];
+        },
+        createFilter(queryString) {
+          return (restaurant) => {
+            return (restaurant.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
+          };
+        },
+        /*分页点击事件*/
         handleCurrentChange(val){
 
-          this.$pagesHelp(this,7,val,"/listUserInform",dealInfom);
+          this.$UserserInform(val,this,"/UserInform","dealInfom");
         },
-        handleEdit(index, row) {
+        /*启用用户*/
+        handleEnable(index, row) {
+          var thisVue=this;
           console.log(index, row);
+          var json={
+            "id":row.id,
+            "isDeleted":0,
+          };
+          thisVue.$updataInform(json,"/updateUserInfrom",this,thisVue,"updateInfom");
+
         },
+        /*禁用用户*/
         handleDelete(index, row) {
           var thisVue=this;
           console.log(index, row);
@@ -240,9 +221,8 @@
             cancelButtonText: '取消',
             type: 'warning'
           }).then(() => {
-              thisVue.$updataInform(json,"/updateUserInfrom",this,thisVue);
-            console.log(thisVue.listUserInform1);
-              var a=1;
+              thisVue.$updataInform(json,"/updateUserInfrom",this,thisVue,"updateInfom");
+
           }).catch(() => {
             this.$message({
               type: 'info',
@@ -250,9 +230,31 @@
             });
           });
         },
-        onSubmit() {
+        /*提交查询用户信息*/
+        submitForm(formName) {
 
-          console.log('submit!');
+          this.$refs[formName].validate((valid) => {
+            if (valid) {
+                if(this.pickerdata==null){
+                  this.dynamicValidateForm.starTime=""
+                  this.dynamicValidateForm.endTime=""
+                }else{
+                  this.dynamicValidateForm.starTime=this.pickerdata[0];
+
+                  //this.dynamicValidateForm.endTime=this.pickerdata[1];
+                  var endTime = Date.parse(new Date(this.pickerdata[1]))+86400000;
+
+                  this.dynamicValidateForm.endTime=this.$timeFormat(endTime,'yyyy-MM-dd HH:mm:ss');
+
+                }
+
+              this.$UserserInform(1,this,"/UserInform","dealInfom");
+              alert('submit!');
+            } else {
+              console.log('error submit!!');
+              return false;
+            }
+          });
 
         }
       }

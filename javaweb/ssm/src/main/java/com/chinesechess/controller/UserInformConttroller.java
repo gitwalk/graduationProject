@@ -39,14 +39,13 @@ public class UserInformConttroller {
         UserInform pojo=new UserInform();
 
         //使用PageHelper插件，进行分页
-        PageHelper.startPage(page.getPageNum(),page.getCount());
+        PageHelper.startPage(page.getPageNum(),page.getCount(),"id desc");
 
         //执行sql语句
         List<UserInform> userInformList=userInformService.select(pojo);
 
         //获取当前分页信息
         PageInfo pageInfo = new PageInfo(userInformList);
-
 
         //获取当前的总条数
         page.setPagetotal(pageInfo.getTotal());
@@ -67,6 +66,49 @@ public class UserInformConttroller {
         return str;
     }
 
+    /*查询特定用户的信息*/
+    @ResponseBody
+    @RequestMapping(value = "/UserInform")
+    public String UserInform(@RequestBody UserInform userInform) {
+
+        String str="error";
+
+        UserInform pojo=userInform;
+
+        //使用PageHelper插件，进行分页
+        PageHelper.startPage(userInform.getPage().getPageNum(),userInform.getPage().getCount(),"id desc");
+
+        //执行sql语句
+        List<UserInform> userInformList=userInformService.select(pojo);
+
+        //获取当前分页信息
+        PageInfo pageInfo = new PageInfo(userInformList);
+
+        Page page=new Page();
+
+        //获取当前的总条数
+        page.setPagetotal(pageInfo.getTotal());
+
+        //获取当前分页的总页数
+        page.setPages(pageInfo.getPages());
+
+        //获取当前页码
+        page.setPageNum(pageInfo.getPageNum());
+
+        //获取页面每页的条数
+        page.setCount(pageInfo.getPageSize());
+
+        List arrayList=new ArrayList();
+        arrayList.add(userInformList);
+        arrayList.add(page);
+
+        str=JSONObject.toJSON(arrayList).toString();
+        System.out.println("arrayList转化后的json："+str);
+
+        return str;
+    }
+
+    /*更新用户信息*/
     @ResponseBody
     @RequestMapping(value = "/updateUserInfrom")
     public String updateUserInfrom(@RequestBody UserInform userInform) {
@@ -83,8 +125,6 @@ public class UserInformConttroller {
 
             }
             return str;
-
-
 
     }
 

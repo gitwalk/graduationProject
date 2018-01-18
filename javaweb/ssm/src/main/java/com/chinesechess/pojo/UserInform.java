@@ -1,6 +1,11 @@
 package com.chinesechess.pojo;
 
 
+import com.chinesechess.util.Page;
+
+import java.sql.Timestamp;
+import java.util.Date;
+
 public class UserInform {
 
   private long id=-1;
@@ -9,10 +14,9 @@ public class UserInform {
   private String emailAddress=null;
   private long role=-1;
   private long sex=-1;
-  private java.sql.Timestamp registerTime=null;
+  private String registerTime=null;
   private long isDeleted=-1;
-
-
+  private String starTime=null;
 
   public long getId() {
     return id;
@@ -22,7 +26,6 @@ public class UserInform {
     this.id = id;
   }
 
-
   public String getName() {
     return name;
   }
@@ -30,7 +33,6 @@ public class UserInform {
   public void setName(String name) {
     this.name = name;
   }
-
 
   public String getPassword() {
     return password;
@@ -40,7 +42,6 @@ public class UserInform {
     this.password = password;
   }
 
-
   public String getEmailAddress() {
     return emailAddress;
   }
@@ -48,7 +49,6 @@ public class UserInform {
   public void setEmailAddress(String emailAddress) {
     this.emailAddress = emailAddress;
   }
-
 
   public long getRole() {
     return role;
@@ -58,7 +58,6 @@ public class UserInform {
     this.role = role;
   }
 
-
   public long getSex() {
     return sex;
   }
@@ -67,15 +66,13 @@ public class UserInform {
     this.sex = sex;
   }
 
-
-  public java.sql.Timestamp getRegisterTime() {
+  public String getRegisterTime() {
     return registerTime;
   }
 
-  public void setRegisterTime(java.sql.Timestamp registerTime) {
+  public void setRegisterTime(String registerTime) {
     this.registerTime = registerTime;
   }
-
 
   public long getIsDeleted() {
     return isDeleted;
@@ -84,6 +81,33 @@ public class UserInform {
   public void setIsDeleted(long isDeleted) {
     this.isDeleted = isDeleted;
   }
+
+  public String getStarTime() {
+    return starTime;
+  }
+
+  public void setStarTime(String starTime) {
+    this.starTime = starTime;
+  }
+
+  public String getEndTime() {
+    return endTime;
+  }
+
+  public void setEndTime(String endTime) {
+    this.endTime = endTime;
+  }
+
+  public Page getPage() {
+    return page;
+  }
+
+  public void setPage(Page page) {
+    this.page = page;
+  }
+
+  private String endTime=null;
+  private Page page=null;
 
   @Override
   public String toString() {

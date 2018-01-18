@@ -156,7 +156,7 @@
     }
 </script>
 
-<style >
+<style scoped>
 
   .el-table__expanded-cell{
     padding: 0!important;

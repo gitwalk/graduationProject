@@ -48,12 +48,14 @@
         FROM user_inform
         <where>
             <if test="pojo.id != -1"> AND id = #{pojo.id} </if>
-            <if test="pojo.name != null"> AND name = #{pojo.name} </if>
-            <if test="pojo.password != null"> AND password = #{pojo.password} </if>
-            <if test="pojo.emailAddress != null"> AND email_address = #{pojo.emailAddress} </if>
+            <if test="pojo.name !='' and pojo.name != null"> AND name = #{pojo.name} </if>
+            <if test="pojo.password !='' and pojo.password != null"> AND password = #{pojo.password} </if>
+            <if test="pojo.emailAddress !='' and pojo.emailAddress != null"> AND email_address = #{pojo.emailAddress} </if>
             <if test="pojo.role != -1"> AND role = #{pojo.role} </if>
             <if test="pojo.sex != -1"> AND sex = #{pojo.sex} </if>
-            <if test="pojo.registerTime != null"> AND register_time = #{pojo.registerTime} </if>
+            <if test="pojo.starTime !='' and pojo.starTime != null"> AND register_time &gt;= #{pojo.starTime} </if>
+            <if test="pojo.endTime !='' and pojo.endTime != null"> AND register_time  &lt;= #{pojo.endTime} </if>
+            <if test="pojo.registerTime !='' and pojo.registerTime != null"> AND register_time = #{pojo.registerTime} </if>
             <if test="pojo.isDeleted != -1"> AND is_deleted = #{pojo.isDeleted} </if>
         </where>
 
