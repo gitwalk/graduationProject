@@ -25,7 +25,7 @@ import java.util.List;
 @Controller
 @CrossOrigin("http://127.0.0.1:8080")
 @RequestMapping("")
-public class UserInformConttroller {
+public class UserInformController {
     @Autowired
     UserInformService userInformService;
 
@@ -39,22 +39,12 @@ public class UserInformConttroller {
         UserInform pojo=new UserInform();
 
         //使用PageHelper插件，进行分页
-        PageHelper.startPage(page.getPageNum(),page.getCount(),"id desc");
+        PageHelper.startPage(page.getPageNum(),page.getCount(),"register_time desc");
 
         //执行sql语句
         List<UserInform> userInformList=userInformService.select(pojo);
 
-        //获取当前分页信息
-        PageInfo pageInfo = new PageInfo(userInformList);
-
-        //获取当前的总条数
-        page.setPagetotal(pageInfo.getTotal());
-
-        //获取当前分页的总页数
-        page.setPages(pageInfo.getPages());
-
-        //获取当前页码
-        page.setPageNum(pageInfo.getPageNum());
+        page.setPageInform(userInformList);
 
         List arrayList=new ArrayList();
         arrayList.add(userInformList);
@@ -76,27 +66,15 @@ public class UserInformConttroller {
         UserInform pojo=userInform;
 
         //使用PageHelper插件，进行分页
-        PageHelper.startPage(userInform.getPage().getPageNum(),userInform.getPage().getCount(),"id desc");
+        PageHelper.startPage(userInform.getPage().getPageNum(),userInform.getPage().getCount(),"register_time desc");
 
         //执行sql语句
         List<UserInform> userInformList=userInformService.select(pojo);
 
-        //获取当前分页信息
-        PageInfo pageInfo = new PageInfo(userInformList);
 
         Page page=new Page();
 
-        //获取当前的总条数
-        page.setPagetotal(pageInfo.getTotal());
-
-        //获取当前分页的总页数
-        page.setPages(pageInfo.getPages());
-
-        //获取当前页码
-        page.setPageNum(pageInfo.getPageNum());
-
-        //获取页面每页的条数
-        page.setCount(pageInfo.getPageSize());
+        page.setPageInform(userInformList);
 
         List arrayList=new ArrayList();
         arrayList.add(userInformList);
@@ -122,10 +100,8 @@ public class UserInformConttroller {
             List<UserInform> userInformList=userInformService.select(pojo);
 
             str=JSONObject.toJSON(userInformList).toString();
-
-            }
+        }
             return str;
-
     }
 
 

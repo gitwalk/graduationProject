@@ -3,22 +3,34 @@ package com.chinesechess.pojo;
 
 import com.chinesechess.util.Page;
 
-import java.sql.Timestamp;
-import java.util.Date;
-
-public class UserInform {
+public class AdminInform {
 
   private long id=-1;
   private String name=null;
   private String password=null;
-  private String emailAddress=null;
+  private String realName=null;
   private long role=-1;
-  private long sex=-1;
   private String registerTime=null;
   private long isDeleted=-1;
-  private String starTime=null;
-  private String endTime=null;
-  private Page page=null;
+  private String starTime = null;
+  private String endTime = null;
+  private Page page = null;
+
+  @Override
+  public String toString() {
+    return "AdminInform{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", password='" + password + '\'' +
+            ", realName='" + realName + '\'' +
+            ", role=" + role +
+            ", registerTime='" + registerTime + '\'' +
+            ", isDeleted=" + isDeleted +
+            ", starTime='" + starTime + '\'' +
+            ", endTime='" + endTime + '\'' +
+            ", page=" + page +
+            '}';
+  }
 
   public long getId() {
     return id;
@@ -44,12 +56,12 @@ public class UserInform {
     this.password = password;
   }
 
-  public String getEmailAddress() {
-    return emailAddress;
+  public String getRealName() {
+    return realName;
   }
 
-  public void setEmailAddress(String emailAddress) {
-    this.emailAddress = emailAddress;
+  public void setRealName(String realName) {
+    this.realName = realName;
   }
 
   public long getRole() {
@@ -58,14 +70,6 @@ public class UserInform {
 
   public void setRole(long role) {
     this.role = role;
-  }
-
-  public long getSex() {
-    return sex;
-  }
-
-  public void setSex(long sex) {
-    this.sex = sex;
   }
 
   public String getRegisterTime() {
@@ -106,21 +110,5 @@ public class UserInform {
 
   public void setPage(Page page) {
     this.page = page;
-  }
-
-
-
-  @Override
-  public String toString() {
-    return "UserInform{" +
-            "id=" + id +
-            ", name='" + name + '\'' +
-            ", password='" + password + '\'' +
-            ", emailAddress='" + emailAddress + '\'' +
-            ", role=" + role +
-            ", sex=" + sex +
-            ", registerTime=" + registerTime +
-            ", isDeleted=" + isDeleted +
-            '}';
   }
 }

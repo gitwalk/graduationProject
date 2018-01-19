@@ -12,7 +12,7 @@
     <!---------------------------搜索栏---------------------------------------------------------------------->
     <el-form  ref="dynamicValidateForm" :inline="true" :model="dynamicValidateForm" class="demo-form-inline" style="margin-top: 3%;margin-left: 1%">
       <el-form-item label="账号">
-        <el-input clearable v-model.trim="dynamicValidateForm.name" placeholder="昵称" style="width: 200px"></el-input>
+        <el-input spellcheck="false" clearable v-model.trim="dynamicValidateForm.name" placeholder="昵称" style="width: 200px"></el-input>
       </el-form-item>
       <el-form-item label="注册时间" >
         <el-date-picker value-format="yyyy-MM-dd HH:mm:ss"  v-model="pickerdata"  type="daterange" align="right" unlink-panels range-separator="至"
@@ -22,7 +22,7 @@
       <el-form-item label="电子邮件" prop="emailAddress" :rules="[
           { type: 'email', message: '请输入正确的邮箱地址', trigger: 'blur,change' }
           ]">
-        <el-autocomplete  :fetch-suggestions="querySearch"
+        <el-autocomplete spellcheck="false" :fetch-suggestions="querySearch"
                           :trigger-on-focus="false"
                          v-model.trim="dynamicValidateForm.emailAddress"
                           placeholder="电子邮件" style="width: 190px"></el-autocomplete>
@@ -40,7 +40,7 @@
     </el-form>
 
 <!--------------------------------------------表格------------------------------------------------------------------->
-  <el-table :data="listUserInform1" style="width: 90%;margin-left: 5%;height:70%;">
+  <el-table :data="listInform1" style="width: 90%;margin-left: 5%;height:70%;">
     <el-table-column label="注册日期" width="190px" align="center">
       <template slot-scope="scope">
         <i class="el-icon-time"></i>
@@ -99,7 +99,7 @@
 
       data() {
         return {
-          listUserInform1:[],
+          listInform1:[],
           pagesInform:[],
           pickerOptions2: {
             disabledDate(time) {

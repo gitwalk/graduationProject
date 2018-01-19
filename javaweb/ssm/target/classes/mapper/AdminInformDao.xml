@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinesechess.mapper.AdminInformDao">
+
+<!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.chinesechess.pojo.AdminInform">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="password" property="password"/>
+        <result column="real_name" property="realName"/>
+        <result column="role" property="role"/>
+        <result column="register_time" property="registerTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+
+    </resultMap>
+
+<!--auto generated Code-->
+    <sql id="all_column">
+        id,
+        name,
+        password,
+        real_name,
+        role,
+        register_time,
+        is_deleted
+    </sql>
+
+<!--auto generated Code-->
+    <insert id="insert">
+        INSERT INTO admin_inform
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != null"> id, </if>
+            <if test="pojo.name != null"> name, </if>
+            <if test="pojo.password != null"> password, </if>
+            <if test="pojo.realName != null"> real_name, </if>
+            <if test="pojo.role != null"> role, </if>
+            <if test="pojo.registerTime != null"> register_time, </if>
+            <if test="pojo.isDeleted != null"> is_deleted, </if>
+
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != null"> #{pojo.id}, </if>
+            <if test="pojo.name != null"> #{pojo.name}, </if>
+            <if test="pojo.password != null"> #{pojo.password}, </if>
+            <if test="pojo.realName != null"> #{pojo.realName}, </if>
+            <if test="pojo.role != null"> #{pojo.role}, </if>
+            <if test="pojo.registerTime != null"> #{pojo.registerTime}, </if>
+            <if test="pojo.isDeleted != null"> #{pojo.isDeleted}, </if>
+
+        </trim>
+    </insert>
+
+<!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO admin_inform(
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.name},
+            #{pojo.password},
+            #{pojo.realName},
+            #{pojo.role},
+            #{pojo.registerTime},
+            #{pojo.isDeleted},
+
+            )
+        </foreach>
+    </insert>
+
+<!--auto generated Code-->
+    <update id="update">
+        UPDATE admin_inform
+        <set>
+            <if test="pojo.id != -1"> id = #{pojo.id}, </if>
+            <if test="pojo.name !='' and pojo.name != null"> name = #{pojo.name}, </if>
+            <if test="pojo.password !='' and pojo.password != null"> password = #{pojo.password}, </if>
+            <if test="pojo.realName !='' and pojo.realName != null"> real_name = #{pojo.realName}, </if>
+            <if test="pojo.role != -1"> role = #{pojo.role}, </if>
+            <if test="pojo.registerTime !='' and pojo.registerTime != null"> register_time = #{pojo.registerTime}, </if>
+            <if test="pojo.isDeleted != -1"> is_deleted = #{pojo.isDeleted}, </if>
+
+        </set>
+         WHERE id = #{pojo.id}
+    </update>
+
+<!--auto generated Code-->
+    <select id="select" resultMap="AllColumnMap">
+        SELECT <include refid="all_column"/>
+        FROM admin_inform
+        <where>
+            <if test="pojo.id != -1"> AND id = #{pojo.id} </if>
+            <if test="pojo.name !='' and pojo.name != null"> AND name = #{pojo.name} </if>
+            <if test="pojo.password !='' and pojo.password != null"> AND password = #{pojo.password} </if>
+            <if test=" pojo.realName !='' and pojo.realName != null"> AND real_name = #{pojo.realName} </if>
+            <if test="pojo.role != -1"> AND role = #{pojo.role} </if>
+            <if test="pojo.registerTime !='' and pojo.registerTime != null"> AND register_time = #{pojo.registerTime} </if>
+            <if test="pojo.isDeleted != -1"> AND is_deleted = #{pojo.isDeleted} </if>
+            <if test="pojo.starTime !='' and pojo.starTime != null"> AND register_time &gt;= #{pojo.starTime} </if>
+            <if test="pojo.endTime !='' and pojo.endTime != null"> AND register_time &lt;= #{pojo.endTime} </if>
+        </where>
+
+    </select>
+
+<!--auto generated Code-->
+    <delete id="delete">
+        DELETE FROM admin_inform where id = #{pojo.id}
+    </delete>
+</mapper>
