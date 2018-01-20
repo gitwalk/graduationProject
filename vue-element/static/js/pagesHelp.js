@@ -1,3 +1,5 @@
+import {formatDuring} from "./timeTool";
+
 /**
  *
  * @param thisVue 传入当前的vue
@@ -23,6 +25,8 @@ export function pagesHelp(thisVue,count,PageNum1,api,callback) {
   }).then(function (response) {
     if(callback=="dealInfom") {
       dealInfom(thisVue,response);
+    }else if(callback=="dealUserLoginInfom"){
+      dealUserLoginInfom(thisVue,response);
     }
     //return response;
   })
@@ -33,7 +37,6 @@ export function pagesHelp(thisVue,count,PageNum1,api,callback) {
 
 
 export function UserserInform(pageNum,thisVue,api,callback) {
-
 
   thisVue.pagesInform.pageNum=pageNum;
   thisVue.dynamicValidateForm.page=thisVue.pagesInform;
@@ -49,6 +52,8 @@ export function UserserInform(pageNum,thisVue,api,callback) {
   }).then(function (response) {
     if(callback=="dealInfom") {
       dealInfom(thisVue,response);
+    }else if(callback=="dealUserLoginInfom"){
+      dealUserLoginInfom(thisVue,response);
     }
 
   })
@@ -83,10 +88,36 @@ export function updataInform(json,api,messageFram,thisVue,callback){
     });
 }
 
+
+function dealUserLoginInfom(thisVue,response) {
+  for(var i in response.data[0]) {
+
+    response.data[0][i].allLoginTime=thisVue.$formatDuring(response.data[0][i].allLoginTime);
+    response.data[0][i].winningRate=response.data[0][i].winningRate*100;
+    response.data[0][i].winningRate=response.data[0][i].winningRate.toFixed(2)+"%";
+    for(var j in response.data[0][i].loginInformList){
+
+      response.data[0][i].loginInformList[j].logoutTime=thisVue.$timeFormat(response.data[0][i].loginInformList[j].logoutTime,'yyyy-MM-dd HH:mm:ss');
+
+      response.data[0][i].loginInformList[j].loginTime=thisVue.$timeFormat(response.data[0][i].loginInformList[j].loginTime,'yyyy-MM-dd HH:mm:ss');
+      response.data[0][i].loginInformList[j].time=thisVue.$formatDuring(response.data[0][i].loginInformList[j].time);
+    }
+
+  }
+  thisVue.userInform=response.data[0];
+  thisVue.pagesInform=response.data[1];
+}
+
+/**
+ * 用于处理账号管理模块的两个表格信息（用户和管理员的表格）
+ * @param thisVue
+ * @param response
+ */
+
 function dealInfom(thisVue,response) {
 
   for(var i in response.data[0]) {
-    if(response.data[0][i].sex){
+    if(response.data[0][i].sex!==undefined){
       //转换性别
       if(response.data[0][i].sex=="0"){
         response.data[0][i].sex="男";
@@ -110,11 +141,15 @@ function dealInfom(thisVue,response) {
 
   thisVue.listInform1=response.data[0];
   thisVue.pagesInform=response.data[1];
-  var a=0;
-
 
 }
 
+/**
+ * 用于处理修改后的单条信息
+ * @param thisVue
+ * @param response
+ * @param messageFram
+ */
 function updateInfom(thisVue,response,messageFram){
 
   if(response.data[0].sex!==undefined){

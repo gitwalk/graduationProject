@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinesechess.mapper.LoginInformDao">
+
+<!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.chinesechess.pojo.LoginInform">
+        <result column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="login_ip" property="loginIp"/>
+        <result column="login_time" property="loginTime"/>
+        <result column="logout_time" property="logoutTime"/>
+        <result column="time" property="time"/>
+    </resultMap>
+
+<!--auto generated Code-->
+    <sql id="all_column">
+        id,
+        user_id,
+        login_ip,
+        login_time,
+        logout_time,
+        time
+    </sql>
+
+<!--auto generated Code-->
+    <insert id="insert">
+        INSERT INTO login_inform
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != -1"> id, </if>
+            <if test="pojo.userId != -1"> user_id, </if>
+            <if test="pojo.loginIp != null"> login_ip, </if>
+            <if test="pojo.loginTime != null"> login_time, </if>
+            <if test="pojo.logoutTime != null"> logout_time, </if>
+            <if test="pojo.time != -1"> time, </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != -1"> #{pojo.id}, </if>
+            <if test="pojo.userId != -1"> #{pojo.userId}, </if>
+            <if test="pojo.loginIp != null"> #{pojo.loginIp}, </if>
+            <if test="pojo.loginTime != null"> #{pojo.loginTime}, </if>
+            <if test="pojo.logoutTime != null"> #{pojo.logoutTime}, </if>
+            <if test="pojo.time != -1"> #{pojo.time}, </if>
+        </trim>
+    </insert>
+
+<!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO login_inform(
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.userId},
+            #{pojo.loginIp},
+            #{pojo.loginTime},
+            #{pojo.logoutTime},
+            #{pojo.time}
+            )
+        </foreach>
+    </insert>
+
+<!--auto generated Code-->
+    <update id="update">
+        UPDATE login_inform
+        <set>
+            <if test="pojo.id != -1"> id = #{pojo.id}, </if>
+            <if test="pojo.userId != -1"> user_id = #{pojo.userId}, </if>
+            <if test="pojo.loginIp != null"> login_ip = #{pojo.loginIp}, </if>
+            <if test="pojo.loginTime != null"> login_time = #{pojo.loginTime}, </if>
+            <if test="pojo.logoutTime != null"> logout_time = #{pojo.logoutTime}, </if>
+            <if test="pojo.time != -1"> time = #{pojo.time} </if>
+        </set>
+         WHERE id = #{pojo.id}
+    </update>
+
+<!--auto generated Code-->
+    <select id="select" resultMap="AllColumnMap">
+        SELECT <include refid="all_column"/>
+        FROM login_inform
+        <where>
+            <if test="pojo.id != -1"> AND id = #{pojo.id} </if>
+            <if test="pojo.userId != -1"> AND user_id = #{pojo.userId} </if>
+            <if test="pojo.loginIp != null"> AND login_ip = #{pojo.loginIp} </if>
+            <if test="pojo.loginTime != null"> AND login_time = #{pojo.loginTime} </if>
+            <if test="pojo.logoutTime != null"> AND logout_time = #{pojo.logoutTime} </if>
+            <if test="pojo.time != -1"> AND time = #{pojo.time} </if>
+        </where>
+
+    </select>
+
+<!--auto generated Code-->
+    <delete id="delete">
+        DELETE FROM login_inform where id = #{pojo.id}
+    </delete>
+</mapper>

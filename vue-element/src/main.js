@@ -4,7 +4,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import App from './App.vue'
 import router from './router/routers'
 import axios from 'axios'
-import {format} from "../static/js/timeTool.js"
+import {format,formatDuring} from "../static/js/timeTool.js"
 import {pagesHelp,updataInform,UserserInform} from "../static/js/pagesHelp.js"
 
 Vue.prototype.$axios = axios
@@ -12,6 +12,7 @@ Vue.prototype.$pagesHelp=pagesHelp
 Vue.prototype.$UserserInform=UserserInform
 Vue.prototype.$updataInform=updataInform
 Vue.prototype.$timeFormat=format
+Vue.prototype.$formatDuring=formatDuring;
 
 // import  "/static/js/TweenLite.min.js"
 // import "/static/js/EasePack.min.js"

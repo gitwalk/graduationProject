@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinesechess.mapper.GameInformDao">
+
+<!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.chinesechess.pojo.GameInform">
+        <result column="id" property="id"/>
+        <result column="red_user_id" property="redUserId"/>
+        <result column="black_user_id" property="blackUserId"/>
+        <result column="start_time" property="startTime"/>
+        <result column="end_time" property="endTime"/>
+        <result column="set_time" property="setTime"/>
+        <result column="set_step_time" property="setStepTime"/>
+        <result column="game_state" property="gameState"/>
+        <result column="step_num" property="stepNum"/>
+    </resultMap>
+
+<!--auto generated Code-->
+    <sql id="all_column">
+        id,
+        red_user_id,
+        black_user_id,
+        start_time,
+        end_time,
+        set_time,
+        set_step_time,
+        game_state,
+        step_num
+    </sql>
+
+<!--auto generated Code-->
+    <insert id="insert">
+        INSERT INTO game_inform
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != -1"> id, </if>
+            <if test="pojo.redUserId != -1"> red_user_id, </if>
+            <if test="pojo.blackUserId != -1"> black_user_id, </if>
+            <if test="pojo.startTime != null"> start_time, </if>
+            <if test="pojo.endTime != null"> end_time, </if>
+            <if test="pojo.setTime != -1"> set_time, </if>
+            <if test="pojo.setStepTime != -1"> set_step_time, </if>
+            <if test="pojo.gameState != -1"> game_state, </if>
+            <if test="pojo.stepNum != -1"> step_num, </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != -1"> #{pojo.id}, </if>
+            <if test="pojo.redUserId != -1"> #{pojo.redUserId}, </if>
+            <if test="pojo.blackUserId != -1"> #{pojo.blackUserId}, </if>
+            <if test="pojo.startTime != null"> #{pojo.startTime}, </if>
+            <if test="pojo.endTime != null"> #{pojo.endTime}, </if>
+            <if test="pojo.setTime != -1"> #{pojo.setTime}, </if>
+            <if test="pojo.setStepTime != -1"> #{pojo.setStepTime}, </if>
+            <if test="pojo.gameState != -1"> #{pojo.gameState}, </if>
+            <if test="pojo.stepNum != -1"> #{pojo.stepNum}, </if>
+        </trim>
+    </insert>
+
+<!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO game_inform(
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.redUserId},
+            #{pojo.blackUserId},
+            #{pojo.startTime},
+            #{pojo.endTime},
+            #{pojo.setTime},
+            #{pojo.setStepTime},
+            #{pojo.gameState},
+            #{pojo.stepNum}
+            )
+        </foreach>
+    </insert>
+
+<!--auto generated Code-->
+    <update id="update">
+        UPDATE game_inform
+        <set>
+            <if test="pojo.id != -1"> id = #{pojo.id}, </if>
+            <if test="pojo.redUserId != -1"> red_user_id = #{pojo.redUserId}, </if>
+            <if test="pojo.blackUserId != -1"> black_user_id = #{pojo.blackUserId}, </if>
+            <if test="pojo.startTime != null"> start_time = #{pojo.startTime}, </if>
+            <if test="pojo.endTime != null"> end_time = #{pojo.endTime}, </if>
+            <if test="pojo.setTime != -1"> set_time = #{pojo.setTime}, </if>
+            <if test="pojo.setStepTime != -1"> set_step_time = #{pojo.setStepTime}, </if>
+            <if test="pojo.gameState != -1"> game_state = #{pojo.gameState}, </if>
+            <if test="pojo.stepNum != -1"> step_num = #{pojo.stepNum} </if>
+        </set>
+         WHERE id = #{pojo.id}
+    </update>
+
+<!--auto generated Code-->
+    <select id="select" resultMap="AllColumnMap">
+        SELECT <include refid="all_column"/>
+        FROM game_inform
+        <where>
+            <if test="pojo.id != -1"> AND id = #{pojo.id} </if>
+            <if test="pojo.redUserId != -1"> AND red_user_id = #{pojo.redUserId} </if>
+            <if test="pojo.blackUserId != -1"> AND black_user_id = #{pojo.blackUserId} </if>
+            <if test="pojo.startTime != null"> AND start_time = #{pojo.startTime} </if>
+            <if test="pojo.endTime != null"> AND end_time = #{pojo.endTime} </if>
+            <if test="pojo.setTime != -1"> AND set_time = #{pojo.setTime} </if>
+            <if test="pojo.setStepTime != -1"> AND set_step_time = #{pojo.setStepTime} </if>
+            <if test="pojo.gameState != -1"> AND game_state = #{pojo.gameState} </if>
+            <if test="pojo.stepNum != -1"> AND step_num = #{pojo.stepNum} </if>
+        </where>
+
+    </select>
+
+<!--auto generated Code-->
+    <delete id="delete">
+        DELETE FROM game_inform where id = #{pojo.id}
+    </delete>
+</mapper>

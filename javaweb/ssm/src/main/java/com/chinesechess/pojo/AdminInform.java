@@ -3,17 +3,30 @@ package com.chinesechess.pojo;
 
 import com.chinesechess.util.Page;
 
+/**
+ * 管理员信息实体类
+ */
 public class AdminInform {
 
+  //管理员在数据库中的id
   private long id=-1;
+  //管理员登录的账号
   private String name=null;
+  //管理员登录的密码
   private String password=null;
+  //管理员的真实姓名
   private String realName=null;
+  //管理员的权限
   private long role=-1;
+  //管理员账号注册时间
   private String registerTime=null;
+  //管理员账号是否禁用
   private long isDeleted=-1;
+  //搜索中的开始时间
   private String starTime = null;
+  //搜索中的结束时间
   private String endTime = null;
+  //页面的分页信息
   private Page page = null;
 
   @Override

@@ -48,7 +48,7 @@
         FROM user_inform
         <where>
             <if test="pojo.id != -1"> AND id = #{pojo.id} </if>
-            <if test="pojo.name !='' and pojo.name != null"> AND name = #{pojo.name} </if>
+            <if test="pojo.name !='' and pojo.name != null"> AND name like CONCAT( #{pojo.name},'%')  </if>
             <if test="pojo.password !='' and pojo.password != null"> AND password = #{pojo.password} </if>
             <if test="pojo.emailAddress !='' and pojo.emailAddress != null"> AND email_address = #{pojo.emailAddress} </if>
             <if test="pojo.role != -1"> AND role = #{pojo.role} </if>

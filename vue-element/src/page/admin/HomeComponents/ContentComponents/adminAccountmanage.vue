@@ -43,14 +43,9 @@
       </el-table-column>
       <el-table-column label="账号" width="180px" align="center">
         <template slot-scope="scope">
-          <!--<el-popover trigger="hover" placement="top">-->
-            <!--<p>性别: {{ scope.row.sex }}</p>-->
-            <!--<p>上线次数: {{ scope.row.loginNum }}次</p>-->
-            <!--<p>对局次数: {{ scope.row.gameNum }}次</p>-->
             <div slot="reference" class="name-wrapper">
               <el-tag size="medium">{{ scope.row.name }}</el-tag>
             </div>
-          <!--</el-popover>-->
         </template>
       </el-table-column>
       <el-table-column label="真实姓名" width="180px" align="center">
