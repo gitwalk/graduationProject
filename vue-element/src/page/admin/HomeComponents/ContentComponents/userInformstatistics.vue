@@ -3,18 +3,17 @@
 <template>
   <div style="height:603.6px;width: 1266px">
     <!----------------------------------导航栏--------------------------------------------------------------------->
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>活动管理</el-breadcrumb-item>
-      <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-      <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+    <el-breadcrumb separator-class="el-icon-arrow-right" style="font-size:15px">
+      <el-breadcrumb-item :to="{ path: '/userInformstatistics' }">
+        用户统计
+      </el-breadcrumb-item>
     </el-breadcrumb>
     <!---------------------------搜索栏---------------------------------------------------------------------->
-    <el-row type="flex" justify="end" class="row-bg" style="margin-top: 2%">
+    <el-row type="flex" justify="end" class="row-bg" style="margin-top: 1%">
       <el-col :span="8" >
         <el-form  :inline="true" ref="dynamicValidateForm" :model="dynamicValidateForm" class="demo-form-inline" >
           <el-form-item label="账号">
-            <el-input spellcheck="false" v-model="dynamicValidateForm.name" placeholder="昵称"></el-input>
+            <el-input clearable spellcheck="false" v-model="dynamicValidateForm.name" placeholder="昵称"></el-input>
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="submitForm('dynamicValidateForm')">查询</el-button>
@@ -70,7 +69,6 @@
       methods:{
         /*分页点击事件*/
         handleCurrentChange(val){
-
           this.$UserserInform(val,this,"/UserInform","dealUserLoginInfom");
         },
         /*提交查询用户信息*/

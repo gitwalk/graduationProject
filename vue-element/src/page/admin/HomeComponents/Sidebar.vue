@@ -3,7 +3,7 @@
   <div >
     <el-row class="tac" >
       <el-col :span="24">
-        <el-menu router    default-active="userInformstatistics" class="el-menu-vertical-demo" @open="handleOpen"
+        <el-menu router   :default-active="getRoutePath()" class="el-menu-vertical-demo" @open="handleOpen"
                  @close="handleClose" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
           <el-menu-item index="userInformstatistics">
             <i class="el-icon-tickets"></i>
@@ -32,7 +32,15 @@
 <script>
     export default {
         name: "sidebar",
+      updated(){
+
+
+      },
       methods: {
+        getRoutePath(){
+          var path=this.$route.path.split("/");
+          return path[1];
+        },
         handleOpen(key, keyPath) {
           console.log(key, keyPath);
         },
@@ -44,16 +52,5 @@
 </script>
 
 <style scoped>
-  /*.sidebar{*/
-    /*display: block;*/
-    /*position: absolute;*/
-    /*width: 250px;*/
-    /*left: 0;*/
-    /*top: 70px;*/
-    /*bottom:0;*/
-    /*background: #2E363F;*/
-  /*}*/
-  /*.sidebar > ul {*/
-    /*height:100%;*/
-  /*}*/
+
 </style>

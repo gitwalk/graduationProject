@@ -1,6 +1,8 @@
 package com.chinesechess.pojo;
 
 
+import com.chinesechess.util.Page;
+
 import java.util.List;
 
 /**
@@ -32,7 +34,65 @@ public class GameInform {
   private UserInform redUserInform=null;
   //记录黑方信息（不在数据库中）
   private UserInform blackUserInform=null;
+  //游戏时长
+  private long gameTime=0;
+  //页面的分页信息
+  private Page page = null;
+  //搜索时的开始和结束时间
+  private String starStarTime=null;
+  private String endStarTime=null;
+  //搜索黑色的玩家昵称
+  private String selectBlackName=null;
+  //搜索Red的玩家昵称
+  private String selectRedName=null;
 
+  public String getSelectBlackName() {
+    return selectBlackName;
+  }
+
+  public void setSelectBlackName(String selectBlackName) {
+    this.selectBlackName = selectBlackName;
+  }
+
+  public String getSelectRedName() {
+    return selectRedName;
+  }
+
+  public void setSelectRedName(String selectRedName) {
+    this.selectRedName = selectRedName;
+  }
+
+  public String getStarStarTime() {
+    return starStarTime;
+  }
+
+  public void setStarStarTime(String starStarTime) {
+    this.starStarTime = starStarTime;
+  }
+
+  public String getEndStarTime() {
+    return endStarTime;
+  }
+
+  public void setEndStarTime(String endStarTime) {
+    this.endStarTime = endStarTime;
+  }
+
+  public Page getPage() {
+    return page;
+  }
+
+  public void setPage(Page page) {
+    this.page = page;
+  }
+
+  public long getGameTime() {
+    return gameTime;
+  }
+
+  public void setGameTime(long gameTime) {
+    this.gameTime = gameTime;
+  }
 
   public UserInform getRedUserInform() {
     return redUserInform;

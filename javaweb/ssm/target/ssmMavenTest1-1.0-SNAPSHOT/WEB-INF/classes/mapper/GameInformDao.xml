@@ -13,11 +13,13 @@
         <result column="set_step_time" property="setStepTime"/>
         <result column="game_state" property="gameState"/>
         <result column="step_num" property="stepNum"/>
+        <result column="rname" property="selectRedName"/>
+        <result column="bname" property="selectBlackName"/>
     </resultMap>
 
 <!--auto generated Code-->
     <sql id="all_column">
-        id,
+        game_inform.id,
         red_user_id,
         black_user_id,
         start_time,
@@ -25,7 +27,9 @@
         set_time,
         set_step_time,
         game_state,
-        step_num
+        step_num,
+        r.name 'rname',
+        b.name 'bname'
     </sql>
 
 <!--auto generated Code-->
@@ -97,8 +101,11 @@
     <select id="select" resultMap="AllColumnMap">
         SELECT <include refid="all_column"/>
         FROM game_inform
+
+        LEFT JOIN user_inform r ON r.id = game_inform.red_user_id
+        LEFT JOIN user_inform b ON b.id = game_inform.black_user_id
         <where>
-            <if test="pojo.id != -1"> AND id = #{pojo.id} </if>
+            <if test="pojo.id != -1"> AND game_inform.id = #{pojo.id} </if>
             <if test="pojo.redUserId != -1"> AND red_user_id = #{pojo.redUserId} </if>
             <if test="pojo.blackUserId != -1"> AND black_user_id = #{pojo.blackUserId} </if>
             <if test="pojo.startTime != null"> AND start_time = #{pojo.startTime} </if>
@@ -107,6 +114,10 @@
             <if test="pojo.setStepTime != -1"> AND set_step_time = #{pojo.setStepTime} </if>
             <if test="pojo.gameState != -1"> AND game_state = #{pojo.gameState} </if>
             <if test="pojo.stepNum != -1"> AND step_num = #{pojo.stepNum} </if>
+            <if test="pojo.starStarTime !='' and pojo.starStarTime != null"> AND start_time &gt;= #{pojo.starStarTime} </if>
+            <if test="pojo.endStarTime !='' and pojo.endStarTime != null"> AND start_time  &lt;= #{pojo.endStarTime} </if>
+            <if test="pojo.selectBlackName != '' and pojo.selectBlackName != null">And b.name like CONCAT( #{pojo.selectBlackName},'%') </if>
+            <if test="pojo.selectRedName !='' and pojo.selectRedName != null">And r.name like CONCAT( #{pojo.selectRedName},'%') </if>
         </where>
 
     </select>

@@ -4,10 +4,10 @@
   <div style="height:603.6px;width: 1266px">
     <!----------------------------------导航栏--------------------------------------------------------------------->
     <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>活动管理</el-breadcrumb-item>
-      <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-      <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/adminAccountmanage' }">
+        管理员信息管理
+      </el-breadcrumb-item>
+
     </el-breadcrumb>
     <!---------------------------搜索栏---------------------------------------------------------------------->
     <el-form  ref="dynamicValidateForm" :inline="true" :model="dynamicValidateForm" class="demo-form-inline" style="margin-top: 3%;margin-left: 1%">
@@ -20,7 +20,7 @@
         </el-date-picker>
       </el-form-item>
       <el-form-item label="真实姓名">
-        <el-input v-model="dynamicValidateForm.realName" placeholder="真实姓名" style="width: 190px"></el-input>
+        <el-input clearable v-model="dynamicValidateForm.realName" placeholder="真实姓名" style="width: 190px"></el-input>
       </el-form-item>
       <el-form-item label="用户状态" >
         <el-select  v-model="dynamicValidateForm.isDeleted" placeholder="状态" style="width: 100px">

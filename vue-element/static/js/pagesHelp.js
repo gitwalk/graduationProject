@@ -27,6 +27,8 @@ export function pagesHelp(thisVue,count,PageNum1,api,callback) {
       dealInfom(thisVue,response);
     }else if(callback=="dealUserLoginInfom"){
       dealUserLoginInfom(thisVue,response);
+    }else if(callback=="dealGameInfom"){
+      dealGameInfom(thisVue,response);
     }
     //return response;
   })
@@ -54,6 +56,8 @@ export function UserserInform(pageNum,thisVue,api,callback) {
       dealInfom(thisVue,response);
     }else if(callback=="dealUserLoginInfom"){
       dealUserLoginInfom(thisVue,response);
+    }else if(callback=="dealGameInfom"){
+      dealGameInfom(thisVue,response);
     }
 
   })
@@ -88,6 +92,47 @@ export function updataInform(json,api,messageFram,thisVue,callback){
     });
 }
 
+function dealGameInfom(thisVue,response) {
+  for(var i in response.data[0]) {
+    response.data[0][i].gameTime=thisVue.$formatDuring(response.data[0][i].gameTime);
+    response.data[0][i].setStepTime=thisVue.$formatDuring(response.data[0][i].setStepTime);
+    response.data[0][i].setTime=thisVue.$formatDuring(response.data[0][i].setTime);
+    response.data[0][i].startTime=thisVue.$timeFormat(response.data[0][i].startTime,'yyyy-MM-dd HH:mm:ss');
+    response.data[0][i].endTime=thisVue.$timeFormat(response.data[0][i].endTime,'yyyy-MM-dd HH:mm:ss');
+    switch(response.data[0][i].gameState) {
+      case 0:
+        response.data[0][i].gameState="红方胜利（绝杀）"
+        break;
+      case 1:
+        response.data[0][i].gameState="黑方胜利（绝杀）"
+        break;
+      case 2:
+        response.data[0][i].gameState="红方胜利（黑方超步时）"
+        break;
+      case 3:
+        response.data[0][i].gameState="黑方胜利（红方超步时）"
+        break;
+      case 4:
+        response.data[0][i].gameState="红方胜利（黑方超局时）"
+        break;
+      case 5:
+        response.data[0][i].gameState="黑方胜利（红方超局时）"
+        break;
+      case 6:
+        response.data[0][i].gameState="红方胜利（黑方认输）"
+        break;
+      case 7:
+        response.data[0][i].gameState="黑方胜利（红方认输）"
+        break;
+      case 8:
+        response.data[0][i].gameState="和局"
+        break;
+    }
+    thisVue.gameInform=response.data[0];
+    thisVue.pagesInform=response.data[1];
+
+  }
+}
 
 function dealUserLoginInfom(thisVue,response) {
   for(var i in response.data[0]) {
