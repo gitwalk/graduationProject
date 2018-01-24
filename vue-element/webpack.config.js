@@ -63,7 +63,7 @@ module.exports = {
      host: '127.0.0.1',
     proxy: {
       '/ssm': {
-        target: 'http://127.0.0.1:8081/ssm',
+        target: 'http://127.0.0.1:8081/',
         changeOrigin: true,
         secure: false
       }

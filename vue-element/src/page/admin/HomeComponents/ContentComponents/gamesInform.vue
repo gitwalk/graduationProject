@@ -82,7 +82,7 @@
         name: "games-inform",
       mounted(){
         /*初始化页面用户信息*/
-        this.$pagesHelp(this,7,1,"/listGameInform","dealGameInfom");
+        this.$pagesHelp(this,7,1,"/admin/listGameInform","dealGameInfom");
       },
       data() {
         return {
@@ -132,7 +132,7 @@
       methods: {
         /*分页点击事件*/
         handleCurrentChange(val){
-          this.$UserserInform(val,this,"/GameInform","dealGameInfom");
+          this.$UserserInform(val,this,"/admin/GameInform","dealGameInfom");
         },
         handleEdit(index, row) {
           console.log(index, row);
@@ -156,7 +156,7 @@
 
               }
 
-              this.$UserserInform(1,this,"/GameInform","dealGameInfom");
+              this.$UserserInform(1,this,"/admin/GameInform","dealGameInfom");
               alert('submit!');
             } else {
               console.log('error submit!!');

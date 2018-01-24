@@ -18,18 +18,24 @@ export function pagesHelp(thisVue,count,PageNum1,api,callback) {
   this.$axios({
     method: 'post',
     headers: {
-      'Content-Type': 'application/json;charset=UTF-8'
+      'Content-Type': 'application/json;charset=UTF-8',
+
     },
-    url: 'http://127.0.0.1:8081/ssm'+api,//listUserInform
+    url: '/ssm'+api,//listUserInform
+    withCredentials : true,
     data: pages,
   }).then(function (response) {
-    if(callback=="dealInfom") {
-      dealInfom(thisVue,response);
-    }else if(callback=="dealUserLoginInfom"){
-      dealUserLoginInfom(thisVue,response);
-    }else if(callback=="dealGameInfom"){
-      dealGameInfom(thisVue,response);
-    }
+   if(response.data=="") {
+     outInform(thisVue);
+    }else{
+     if(callback=="dealInfom") {
+       dealInfom(thisVue,response);
+     }else if(callback=="dealUserLoginInfom"){
+       dealUserLoginInfom(thisVue,response);
+     }else if(callback=="dealGameInfom"){
+       dealGameInfom(thisVue,response);
+     }
+   }
     //return response;
   })
     .catch(function (error) {
@@ -37,6 +43,44 @@ export function pagesHelp(thisVue,count,PageNum1,api,callback) {
     });
 }
 
+
+export function LoginAxios(per,thisVue,api,callback) {
+  var jsonData = JSON.stringify(per);
+    this.$axios({
+    method: 'post',
+    headers: {
+      'Content-type': 'application/json;charset=UTF-8'},
+    withCredentials : true,
+    url: '/ssm'+api,
+    data: jsonData
+  }).then(function (response){
+      if(response.data=="") {
+        outInform(thisVue);
+      }else {
+        if(callback=="adminLogin"){
+          adminLogin(response,thisVue);
+        }else{
+          if(response.data=="") {
+            thisVue.$alert('请重新登录', '消息', {
+              confirmButtonText: '确定',
+              callback: action => {
+                thisVue.$router.push('/');
+              }
+            });
+          }else if(callback=="checkAdmin"){
+            if(response.data==="error"){
+              callback="error";
+            }
+            callback="success";
+          }
+        }
+      }
+
+  }).catch(function (error) {
+      console.log(error);
+    });
+
+}
 
 export function UserserInform(pageNum,thisVue,api,callback) {
 
@@ -47,24 +91,29 @@ export function UserserInform(pageNum,thisVue,api,callback) {
   this.$axios({
     method: 'post',
     headers: {
-      'Content-Type': 'application/json;charset=UTF-8'
+      'Content-Type': 'application/json;charset=UTF-8',
+
     },
-    url: 'http://127.0.0.1:8081/ssm'+api,//listUserInform
+    withCredentials : true,
+    url: '/ssm'+api,//listUserInform
     data: jsonData,
   }).then(function (response) {
-    if(callback=="dealInfom") {
-      dealInfom(thisVue,response);
-    }else if(callback=="dealUserLoginInfom"){
-      dealUserLoginInfom(thisVue,response);
-    }else if(callback=="dealGameInfom"){
-      dealGameInfom(thisVue,response);
+    if(response.data=="") {
+      outInform(thisVue);
+    }else{
+      if(callback=="dealInfom") {
+        dealInfom(thisVue,response);
+      }else if(callback=="dealUserLoginInfom"){
+        dealUserLoginInfom(thisVue,response);
+      }else if(callback=="dealGameInfom"){
+        dealGameInfom(thisVue,response);
+      }
     }
 
   })
     .catch(function (error) {
       console.log(error);
     });
-
 }
 
 /**
@@ -78,18 +127,86 @@ export function updataInform(json,api,messageFram,thisVue,callback){
     headers: {
       'Content-Type': 'application/json;charset=UTF-8'
     },
-    url: 'http://127.0.0.1:8081/ssm'+api,//listUserInform
+    url: '/ssm'+api,//listUserInform
     data: json,
   }).then(function (response) {
-    if(callback=="updateInfom"){
-      updateInfom(thisVue,response,messageFram);
+    if(response.data=="") {
+      outInform(thisVue);
+    }else {
+      if (callback == "updateInfom") {
+        updateInfom(thisVue, response, messageFram);
+      } else if (callback == "updataAdminPassWord") {
+        updataAdminPassWord(thisVue, response);
+      } else if (callback = "addAdminInfrom") {
+        addAdminInfrom(thisVue, response);
+      }
     }
-
   })
     .catch(function (error) {
       console.log(error);
 
     });
+}
+
+function outInform(thisVue) {
+
+    thisVue.$alert('请重新登录', '消息', {
+      confirmButtonText: '确定',
+      callback: action => {
+        thisVue.$router.push('/');
+      }
+    });
+
+}
+
+function addAdminInfrom(thisVue,response) {
+  if(response.data=="success"){
+    thisVue.$message({
+      message: '添加成功',
+      type: 'success',
+
+    });
+  }else if(response.data=="error"){
+    thisVue.$message({
+      message: '添加失败',
+      type: 'error',
+
+    });
+  }
+
+}
+
+function updataAdminPassWord(thisVue,response) {
+  if(response.data!="error"){
+
+    thisVue.logInOrOut(thisVue,"/logoutAdminInfrom","updataAdminPassWord");
+  }else {
+    thisVue.$message({
+      message: '修改失败',
+      type: 'error',
+
+    });
+  }
+}
+
+
+
+function adminLogin(response,thisVue) {
+  if(response.data=="error"){
+    thisVue.$alert('账号或密码错误', '消息', {
+      confirmButtonText: '确定',
+      callback: action => {
+      }
+    });
+  }else if(response.data=="disable"){
+    thisVue.$alert('该账户已禁用', '消息', {
+      confirmButtonText: '确定',
+      callback: action => {
+      }
+    });
+  } else {
+    thisVue.$router.push('/userInformstatistics')
+  }
 }
 
 function dealGameInfom(thisVue,response) {

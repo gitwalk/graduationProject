@@ -15,7 +15,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -28,7 +33,7 @@ public class AdminInformController {
 
     /*对所有管理员信息查询*/
     @ResponseBody
-    @RequestMapping(value = "/listAdminInform")
+    @RequestMapping(value = "/admin/listAdminInform")
     public String listAdminInform(@RequestBody Page page) {
 
         String str="error";
@@ -57,7 +62,7 @@ public class AdminInformController {
 
     /*查询特定管理员的信息*/
     @ResponseBody
-    @RequestMapping(value = "/AdminInform")
+    @RequestMapping(value = "/admin/AdminInform")
     public String AdminInform(@RequestBody AdminInform adminInform) {
 
         String str="error";
@@ -86,7 +91,7 @@ public class AdminInformController {
 
     /*更新管理员信息*/
     @ResponseBody
-    @RequestMapping(value = "/updateAdminInfrom")
+    @RequestMapping(value = "/admin/updateAdminInfrom")
     public String updateAdminInfrom(@RequestBody AdminInform adminInform) {
 
         String str="error";
@@ -102,5 +107,92 @@ public class AdminInformController {
         return str;
     }
 
+    /*获取session的信息*/
+    @ResponseBody
+    @RequestMapping(value = "/admin/getSession")
+    public String updateAdminInfrom(HttpServletRequest request,
+                                    HttpServletResponse response, Object handler) {
+
+        String str="error";
+        HttpSession session =request.getSession();
+        Object obj = session.getAttribute("admin");
+        if(obj!=null){
+            str=JSONObject.toJSON(obj).toString();
+        }
+        return str;
+    }
+
+    /*登录设置session*/
+    @ResponseBody
+    @RequestMapping(value = "/loginAdminInfrom")
+    public String loginAdminInfrom(@RequestBody AdminInform adminInform, HttpServletRequest request,
+                                   HttpServletResponse response, Object handler) {
+
+        String str="error";
+        HttpSession session =request.getSession();
+        AdminInform pojo=adminInform;
+        List<AdminInform> adminInformList=adminInformService.select(pojo);
+        for(AdminInform ad:adminInformList){
+            if(ad.getIsDeleted()==1){
+                return "disable";
+            }
+        }
+        if(adminInformList.size()>0){
+            session.setAttribute("admin", adminInformList);
+            str=JSONObject.toJSON(adminInformList).toString();
+
+        }
+
+        return str;
+    }
+
+    /*登录设置session*/
+    @ResponseBody
+    @RequestMapping(value = "/admin/logoutAdminInfrom")
+    public String logoutAdminInfrom( HttpServletRequest request,
+                                   HttpServletResponse response, Object handler) {
+
+        HttpSession session =request.getSession();
+
+        session.setAttribute("admin", null);
+        return "success";
+    }
+
+    /*检查设置的name是否唯一*/
+    @ResponseBody
+    @RequestMapping(value = "/admin/checkAdminName")
+    public String checkAdminName(@RequestBody AdminInform adminInform, HttpServletRequest request,
+                                   HttpServletResponse response, Object handler) {
+
+        String str="error";
+
+        AdminInform pojo=new AdminInform();
+        pojo.setName(adminInform.getName());
+        List<AdminInform> adminInformList=adminInformService.select(pojo);
+        if(adminInformList.size()==0){
+            str="success";
+        }
+        return str;
+    }
+
+    /*添加管理员*/
+    @ResponseBody
+    @RequestMapping(value = "/admin/addAdminInfrom")
+    public String addAdminInfrom(@RequestBody AdminInform adminInform, HttpServletRequest request,
+                                 HttpServletResponse response, Object handler) {
+
+        String str="error";
+        AdminInform pojo=adminInform;
+        pojo.setIsDeleted(0);
+        pojo.setRole(1);
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        pojo.setRegisterTime(simpleDateFormat.format(date));
+        int row=adminInformService.insert(pojo);
+        if(row>0){
+            str="success";
+        }
+        return str;
+    }
 
 }

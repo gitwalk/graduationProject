@@ -64,12 +64,12 @@
         name: "user-informstatistics",
     mounted(){
       /*初始化页面用户信息*/
-      this.$pagesHelp(this,7,1,"/listUserInform","dealUserLoginInfom");
+      this.$pagesHelp(this,7,1,"/admin/listUserInform","dealUserLoginInfom");
     },
       methods:{
         /*分页点击事件*/
         handleCurrentChange(val){
-          this.$UserserInform(val,this,"/UserInform","dealUserLoginInfom");
+          this.$UserserInform(val,this,"/admin/UserInform","dealUserLoginInfom");
         },
         /*提交查询用户信息*/
         submitForm(formName) {
@@ -77,7 +77,7 @@
               this.$refs[formName].validate((valid) => {
                 if (valid) {
 
-              this.$UserserInform(1,this,"/UserInform","dealUserLoginInfom");
+              this.$UserserInform(1,this,"/admin/UserInform","dealUserLoginInfom");
               alert('submit!');
             } else {
               console.log('error submit!!');

@@ -5,9 +5,11 @@ import App from './App.vue'
 import router from './router/routers'
 import axios from 'axios'
 import {format,formatDuring} from "../static/js/timeTool.js"
-import {pagesHelp,updataInform,UserserInform} from "../static/js/pagesHelp.js"
+import {pagesHelp,updataInform,UserserInform,LoginAxios} from "../static/js/pagesHelp.js"
 
-Vue.prototype.$axios = axios
+axios.defaults.withCredentials=true;
+Vue.prototype.$LoginAxios=LoginAxios;
+Vue.prototype.$axios = axios;
 Vue.prototype.$pagesHelp=pagesHelp
 Vue.prototype.$UserserInform=UserserInform
 Vue.prototype.$updataInform=updataInform

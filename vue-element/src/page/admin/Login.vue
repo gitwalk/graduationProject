@@ -6,17 +6,21 @@
         <canvas id="demo-canvas"></canvas>
         <div class="logo_box">
           <h3>欢迎你</h3>
-          <form action="#" name="f" method="post">
+          <el-form ref="dynamicValidateForm" :rules="rules" :model="dynamicValidateForm" >
             <div class="input_outer">
-              <span class="u_user"></span>
-              <input name="logname" class="text" style="color: #FFFFFF !important" type="text" placeholder="请输入账户">
+              <el-form-item  prop="name">
+                <span class="u_user"></span>
+                <input v-model.trim="dynamicValidateForm.name" class="text" style="color: #FFFFFF !important" type="text" placeholder="请输入账户" />
+              </el-form-item>
             </div>
             <div class="input_outer">
-              <span class="us_uer"></span>
-              <input name="logpass" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
+              <el-form-item  prop="password">
+                <span class="us_uer"></span>
+                <input v-model.trim="dynamicValidateForm.password" class="text" style="color: #FFFFFF !important;" type="password" placeholder="请输入密码" />
+              </el-form-item>
             </div>
-            <div class="mb2"><a @click="submitForm('ruleForm')" class="act-but submit"  style="color: #FFFFFF">登录</a></div>
-          </form>
+            <div class="mb2"><a @click="submitForm('dynamicValidateForm')" class="act-but submit"  style="color: #FFFFFF">登录</a></div>
+          </el-form>
         </div>
       </div>
     </div>
@@ -33,21 +37,41 @@
    // var category={"name":"test","id":3};
    // var jsonData = JSON.stringify(category);
    export default {
+     data() {
+       return {
 
+         dynamicValidateForm: {
+           name:'',
+           password:'',
+
+         },
+         rules: {
+           name: [
+             { required: true, message: '请输入账号', trigger: 'blur' },
+             { min: 1, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+           ],
+           password:[
+             { required: true, message: '请输入密码', trigger: 'blur' },
+             { min: 1, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+           ]
+         }
+       }
+     },
      methods: {
        submitForm(formName) {
 
-        /* this.$axios({
-           method: 'post',
-           headers: {
-             'Content-type': 'application/json'
-           },
-           url: 'http://127.0.0.1:8081/ssm/submitTest',
-           data: jsonData
-         });*/
+         this.$refs[formName].validate((valid) => {
+           if (valid) {
 
-          const self = this;
-          this.$router.push('/home')
+             this.$LoginAxios(this.dynamicValidateForm,this,"/loginAdminInfrom","adminLogin");
+           } else {
+             console.log('error submit!!');
+             return false;
+           }
+         }
+         );
+
+
        }
      }
      ,mounted () {
@@ -63,6 +87,15 @@
 <style scoped src="../../../static/css/normalize.css" />
 <style scoped src="../../../static/css/demo.css" />
 <style scoped src="../../../static/css/component.css" />
+<style>
+
+  .input_outer .el-form-item__error{
+    left: 40px !important;
+    font-size: 13px;
+  }
+
+</style>
+
 
 <style scoped>
 

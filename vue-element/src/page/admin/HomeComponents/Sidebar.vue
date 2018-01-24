@@ -16,7 +16,7 @@
             </template>
             <el-menu-item-group >
               <el-menu-item index="userAccountmanage">用户账号管理</el-menu-item>
-              <el-menu-item index="adminAccountmanage">管理员账号管理</el-menu-item>
+              <el-menu-item v-show="dynamicValidateForm.role==2" index="adminAccountmanage">管理员账号管理</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-menu-item index="gamesInform">
@@ -32,11 +32,51 @@
 <script>
     export default {
         name: "sidebar",
-      updated(){
-
-
+      data(){
+        return{
+          dynamicValidateForm: {
+            id:'',
+            name:'',
+            role:''
+          },
+        }
+      },
+      mounted(){
+        this.logInOrOut(this,"/getSession","getSession");
       },
       methods: {
+        logInOrOut(thisVue,api,callback){
+          this.$axios({
+            method: 'post',
+            headers: {
+              'Content-type': 'application/json;charset=UTF-8'
+            },
+            withCredentials : true,
+            url: '/ssm/admin'+api,
+
+          }).then(function (response) {
+            console.log(response);
+            if(callback=="getSession"){
+              if(response.data=="error"){
+                thisVue.$alert('请重新登录', '消息', {
+                  confirmButtonText: '确定',
+                  callback: action => {
+                    thisVue.$router.push('/');
+                  }
+                });
+
+              }else {
+                thisVue.dynamicValidateForm.id=response.data[0].id;
+                thisVue.dynamicValidateForm.name=response.data[0].name;
+                thisVue.dynamicValidateForm.role=response.data[0].role;
+
+              }
+            }
+          })
+            .catch(function (error) {
+              console.log(error);
+            });
+        },
         getRoutePath(){
           var path=this.$route.path.split("/");
           return path[1];

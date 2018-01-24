@@ -146,7 +146,7 @@
       },
       mounted(){
           /*初始化页面用户信息*/
-          this.$pagesHelp(this,7,1,"/listUserInform","dealInfom");
+          this.$pagesHelp(this,7,1,"/admin/listUserInform","dealInfom");
       },
       methods: {
         /*邮箱匹配*/
@@ -195,7 +195,7 @@
         /*分页点击事件*/
         handleCurrentChange(val){
 
-          this.$UserserInform(val,this,"/UserInform","dealInfom");
+          this.$UserserInform(val,this,"/admin/UserInform","dealInfom");
         },
         /*启用用户*/
         handleEnable(index, row) {
@@ -205,7 +205,7 @@
             "id":row.id,
             "isDeleted":0,
           };
-          thisVue.$updataInform(json,"/updateUserInfrom",this,thisVue,"updateInfom");
+          thisVue.$updataInform(json,"/admin/updateUserInfrom",this,thisVue,"updateInfom");
 
         },
         /*禁用用户*/
@@ -221,7 +221,7 @@
             cancelButtonText: '取消',
             type: 'warning'
           }).then(() => {
-              thisVue.$updataInform(json,"/updateUserInfrom",this,thisVue,"updateInfom");
+              thisVue.$updataInform(json,"/admin/updateUserInfrom",this,thisVue,"updateInfom");
 
           }).catch(() => {
             this.$message({
@@ -248,7 +248,7 @@
 
                 }
 
-              this.$UserserInform(1,this,"/UserInform","dealInfom");
+              this.$UserserInform(1,this,"/admin/UserInform","dealInfom");
               alert('submit!');
             } else {
               console.log('error submit!!');

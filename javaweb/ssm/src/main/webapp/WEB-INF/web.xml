@@ -36,6 +36,20 @@
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
+  <!-- 跨域请求 -->
+  <filter>
+    <filter-name>SimpleCORSFilter</filter-name>
+    <filter-class>com.chinesechess.Filter.SimpleCORSFilter</filter-class>
+    <init-param>
+      <param-name>IsCross</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>SimpleCORSFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
   <!-- spring mvc核心：分发servlet -->
   <servlet>
     <servlet-name>mvc-dispatcher</servlet-name>

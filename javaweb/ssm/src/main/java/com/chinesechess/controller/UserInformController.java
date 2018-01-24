@@ -42,7 +42,7 @@ public class UserInformController {
 
     /*对所有用户信息查询*/
     @ResponseBody
-    @RequestMapping(value = "/listUserInform")
+    @RequestMapping(value = "/admin/listUserInform")
     public String listUserInform(@RequestBody Page page) {
 
         String str="error";
@@ -68,7 +68,7 @@ public class UserInformController {
 
     /*查询特定用户的信息*/
     @ResponseBody
-    @RequestMapping(value = "/UserInform")
+    @RequestMapping(value = "/admin/UserInform")
     public String UserInform(@RequestBody UserInform userInform) {
 
         String str="error";
@@ -98,7 +98,7 @@ public class UserInformController {
 
     /*更新用户信息*/
     @ResponseBody
-    @RequestMapping(value = "/updateUserInfrom")
+    @RequestMapping(value = "/admin/updateUserInfrom")
     public String updateUserInfrom(@RequestBody UserInform userInform) {
 
         String str="error";

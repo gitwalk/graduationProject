@@ -29,24 +29,24 @@
     <insert id="insert">
         INSERT INTO admin_inform
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="pojo.id != null"> id, </if>
-            <if test="pojo.name != null"> name, </if>
-            <if test="pojo.password != null"> password, </if>
-            <if test="pojo.realName != null"> real_name, </if>
-            <if test="pojo.role != null"> role, </if>
+
+            <if test="pojo.name !='' and pojo.name != null"> name, </if>
+            <if test="pojo.password !='' and pojo.password != null"> password, </if>
+            <if test="pojo.realName !='' and pojo.realName != null"> real_name, </if>
+            <if test="pojo.role != -1"> role, </if>
             <if test="pojo.registerTime != null"> register_time, </if>
-            <if test="pojo.isDeleted != null"> is_deleted, </if>
+            <if test="pojo.isDeleted != -1"> is_deleted, </if>
 
         </trim>
         VALUES
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="pojo.id != null"> #{pojo.id}, </if>
-            <if test="pojo.name != null"> #{pojo.name}, </if>
-            <if test="pojo.password != null"> #{pojo.password}, </if>
-            <if test="pojo.realName != null"> #{pojo.realName}, </if>
-            <if test="pojo.role != null"> #{pojo.role}, </if>
+
+            <if test="pojo.name !='' and pojo.name != null"> #{pojo.name}, </if>
+            <if test="pojo.password !='' and pojo.password != null"> #{pojo.password}, </if>
+            <if test="pojo.realName !='' and pojo.realName != null"> #{pojo.realName}, </if>
+            <if test="pojo.role != -1"> #{pojo.role}, </if>
             <if test="pojo.registerTime != null"> #{pojo.registerTime}, </if>
-            <if test="pojo.isDeleted != null"> #{pojo.isDeleted}, </if>
+            <if test="pojo.isDeleted != -1"> #{pojo.isDeleted}, </if>
 
         </trim>
     </insert>
@@ -58,7 +58,7 @@
         )VALUES
         <foreach collection="pojos" item="pojo" index="index" separator=",">
             (
-            #{pojo.id},
+
             #{pojo.name},
             #{pojo.password},
             #{pojo.realName},

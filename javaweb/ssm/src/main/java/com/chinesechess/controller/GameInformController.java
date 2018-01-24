@@ -31,7 +31,7 @@ public class GameInformController {
 
     /*对所有管理员信息查询*/
     @ResponseBody
-    @RequestMapping(value = "/listGameInform")
+    @RequestMapping(value = "/admin/listGameInform")
     public String listGameInform(@RequestBody Page page) {
 
         String str="error";
@@ -65,7 +65,7 @@ public class GameInformController {
 
     /*查询特定管理员的信息*/
     @ResponseBody
-    @RequestMapping(value = "/GameInform")
+    @RequestMapping(value = "/admin/GameInform")
     public String GameInform(@RequestBody GameInform gameInform) {
 
         String str="error";

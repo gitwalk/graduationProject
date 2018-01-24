@@ -60,9 +60,9 @@
       </el-table-column>
       <el-table-column label="操作" align="center">
         <template slot-scope="scope">
-          <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-          <el-button v-if="scope.row.isDeleted==='禁用'" type="success" size="mini" @click="handleEnable(scope.$index, scope.row)">启用</el-button>
-          <el-button v-else size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">禁用</el-button>
+          <!--<el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>-->
+          <el-button  v-if="scope.row.isDeleted==='禁用'&& scope.row.role=='1'" type="success" size="mini" @click="handleEnable(scope.$index, scope.row)">启用</el-button>
+          <el-button v-else-if="scope.row.role=='1'" size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">禁用</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -131,13 +131,13 @@
       },
       mounted(){
         /*初始化页面用户信息*/
-        this.$pagesHelp(this,7,1,"/listAdminInform","dealInfom");
+        this.$pagesHelp(this,7,1,"/admin/listAdminInform","dealInfom");
       },
       methods: {
         /*分页点击事件*/
         handleCurrentChange(val){
 
-          this.$UserserInform(val,this,"/AdminInform","dealInfom");
+          this.$UserserInform(val,this,"/admin/AdminInform","dealInfom");
         },
         /*启用用户*/
         handleEnable(index, row) {
@@ -147,7 +147,7 @@
             "id":row.id,
             "isDeleted":0,
           };
-          thisVue.$updataInform(json,"/updateAdminInfrom",this,thisVue,"updateInfom");
+          thisVue.$updataInform(json,"/admin/updateAdminInfrom",this,thisVue,"updateInfom");
         },
         /*禁用用户*/
         handleDelete(index, row) {
@@ -162,7 +162,7 @@
             cancelButtonText: '取消',
             type: 'warning'
           }).then(() => {
-            thisVue.$updataInform(json,"/updateAdminInfrom",this,thisVue,"updateInfom");
+            thisVue.$updataInform(json,"/admin/updateAdminInfrom",this,thisVue,"updateInfom");
 
           }).catch(() => {
             this.$message({
@@ -190,8 +190,7 @@
                 this.dynamicValidateForm.endTime=this.$timeFormat(endTime,'yyyy-MM-dd HH:mm:ss');
 
               }
-
-              this.$UserserInform(1,this,"/AdminInform","dealInfom");
+              this.$UserserInform(1,this,"/admin/AdminInform","dealInfom");
               alert('submit!');
             } else {
               console.log('error submit!!');
