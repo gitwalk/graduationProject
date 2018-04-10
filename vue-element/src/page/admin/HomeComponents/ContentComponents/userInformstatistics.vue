@@ -78,7 +78,7 @@
                 if (valid) {
 
               this.$UserserInform(1,this,"/admin/UserInform","dealUserLoginInfom");
-              alert('submit!');
+
             } else {
               console.log('error submit!!');
               return false;

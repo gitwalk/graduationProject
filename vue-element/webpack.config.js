@@ -2,6 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 var proxy = require('http-proxy-middleware')
 
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -9,7 +10,12 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
-
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
+  ],
   module: {
     rules: [
       {

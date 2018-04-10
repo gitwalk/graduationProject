@@ -1,9 +1,10 @@
 //登录界面
 <template>
-  <div class="container demo-1">
-    <div class="content">
-      <div id="large-header" class="large-header">
-        <canvas id="demo-canvas"></canvas>
+  <div id="bodyd" class="container demo-1" style="height: 100%">
+    <div class="content" style="height: 100%;overflow-x: hidden;
+       overflow-y: hidden;">
+      <div id="large-header" class="large-header" style="height: 720px !important;">
+        <canvas id="demo-canvas" style="height: 100%"></canvas>
         <div class="logo_box">
           <h3>欢迎你</h3>
           <el-form ref="dynamicValidateForm" :rules="rules" :model="dynamicValidateForm" >
@@ -98,7 +99,10 @@
 
 
 <style scoped>
-
+  /*#bodyd{*/
+    /*overflow-x: hidden;*/
+    /*overflow-y: hidden;*/
+  /*}*/
   a:hover{
     cursor:pointer
   }

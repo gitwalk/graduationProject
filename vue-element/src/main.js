@@ -4,10 +4,18 @@ import 'element-ui/lib/theme-chalk/index.css'
 import App from './App.vue'
 import router from './router/routers'
 import axios from 'axios'
+import BoardValue from "../static/js/chessBoardValue.js"
+import $ from "jquery"
+import animate from 'animate.css'
+import  Velocity from 'velocity-animate'
 import {format,formatDuring} from "../static/js/timeTool.js"
 import {pagesHelp,updataInform,UserserInform,LoginAxios} from "../static/js/pagesHelp.js"
 
+
+
 axios.defaults.withCredentials=true;
+
+Vue.prototype.BoardValue=BoardValue;
 Vue.prototype.$LoginAxios=LoginAxios;
 Vue.prototype.$axios = axios;
 Vue.prototype.$pagesHelp=pagesHelp
@@ -34,7 +42,9 @@ Vue.prototype.$formatDuring=formatDuring;
 // import "../static/css/component.css";
 
 Vue.use(ElementUI)
-
+// Vue.use(animate)
+// Vue.use(Velocity)
+// Vue.use($)
 
 new Vue({
   el: '#app',

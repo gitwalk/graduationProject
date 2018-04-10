@@ -7,12 +7,51 @@ import gamesInform from  '../page/admin/HomeComponents/ContentComponents/gamesIn
 import userAccountmanage from  '../page/admin/HomeComponents/ContentComponents/userAccountmanage'
 import userInformstatistics from  '../page/admin/HomeComponents/ContentComponents/userInformstatistics'
 
-
+import userLogin from '../page/user/Login.vue'
+import chessPlay from '../page/user/chessPlay.vue'
+import userHome from '../page/user/Home.vue'
+import gameLobby from '../page/user/MComponets/gameLobby.vue'
+import userInform from '../page/user/MComponets/userInform.vue'
+import Record from '../page/user/MComponets/Record.vue'
+import gamePlay from '../page/user/gamePlay.vue'
 
 Vue.use(Router);
 
 export default new Router({
   routes:[
+    {
+      path:'/user',//普通用户登录
+      component:userLogin
+    },
+    {
+      path: '/chessPlay',//对局房间
+      component:chessPlay
+    },
+    {
+      path:'/gamePlay',//普通用户登录
+      component:gamePlay
+    },
+    {
+      path: '/userhome',
+      component:userHome ,
+      children:[
+        {
+          path: '/gameLobby',//游戏大厅
+          component:gameLobby
+        },
+
+        {
+          path: '/userInform',//个人信息
+          component:userInform
+        },
+        {
+          path: '/Record',//对局记录
+          component:Record
+        },
+
+      ]
+    },
+
     {
       path: '/',
       redirect: '/login'

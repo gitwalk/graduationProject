@@ -191,7 +191,7 @@
 
               }
               this.$UserserInform(1,this,"/admin/AdminInform","dealInfom");
-              alert('submit!');
+
             } else {
               console.log('error submit!!');
               return false;

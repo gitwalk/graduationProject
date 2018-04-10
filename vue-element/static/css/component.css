@@ -3,6 +3,8 @@
 	position: relative;
 	width: 100%;
 	background: #333;
+  overflow-x: hidden;
+  overflow-y: hidden;
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
@@ -30,7 +32,7 @@
 	color: #FFFFFF;
 	height: 20px;
 	line-height: 20px;
-	padding:0 0 35px 0; 
+	padding:0 0 35px 0;
 }
 .forms{
 	width: 280px;
@@ -41,7 +43,7 @@
 	min-height: 450px;
 	padding-top: 35px;
 	position: relative;
-}		
+}
 .input_outer{
 	height: 46px;
 	padding: 0 5px;
