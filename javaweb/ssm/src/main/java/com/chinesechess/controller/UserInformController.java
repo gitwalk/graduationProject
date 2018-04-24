@@ -22,10 +22,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 // 告诉spring mvc这是一个控制器类
 @Controller
@@ -39,6 +41,29 @@ public class UserInformController {
     LoginInformService loginInformService;
     @Autowired
     GameInformService gameInformService;
+
+
+    /*对所有用户信息查询*/
+    @ResponseBody
+    @RequestMapping(value = "/user/selectUserInform")
+    public String selectUserInform( HttpServletRequest request, HttpServletResponse response) {
+
+        String str="error";
+        UserInform pojo=(UserInform) request.getSession().getAttribute("userInform");
+
+        //执行sql语句
+        List<UserInform> userInformList=userInformService.select(pojo);
+
+
+        this.setUserLoginInform_GameNum_winningRate(userInformList);
+
+        str=JSONObject.toJSON(userInformList).toString();
+        System.out.println("arrayList转化后的json："+str);
+
+        return str;
+    }
+
+
 
     /*对所有用户信息查询*/
     @ResponseBody
@@ -96,12 +121,132 @@ public class UserInformController {
         return str;
     }
 
+    /*添加用户信息*/
+    @ResponseBody
+    @RequestMapping(value = "/addUser")
+    public String addUser(@RequestBody UserInform userInform) {
+
+        String str="error";
+        UserInform pojo=userInform;
+        //设置是否禁用
+        pojo.setIsDeleted(0);
+
+        //设置当前时间
+        SimpleDateFormat simpleDateFormat= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateString = simpleDateFormat.format(new Date());
+        pojo.setRegisterTime(dateString);
+        //设置权限
+        pojo.setRole(0);
+        //设置性别为保密
+        pojo.setSex(2);
+        Integer row=userInformService.insert(userInform);
+        if(row>0) str=row.toString();
+
+        return str;
+    }
+
+    /*检查用户信息是否存在*/
+    @ResponseBody
+    @RequestMapping(value = "/checkInform")
+    public String checkInform(@RequestBody UserInform userInform) {
+
+        String str="error";
+        //执行sql语句
+        Integer row=userInformService.select(userInform).size();
+
+        return row.toString();
+    }
+
+    /*更新用户性别*/
+    @ResponseBody
+    @RequestMapping(value = "/user/updataUsersex")
+    public String updataUsersex(@RequestBody UserInform userInform,HttpServletRequest request, HttpServletResponse response) {
+
+        String str="error";
+        Integer userId=(int)((UserInform) request.getSession().getAttribute("userInform")).getId();
+
+        UserInform temp=new UserInform();
+        temp.setId(userId);
+        temp.setSex(userInform.getSex());
+
+        Integer row=userInformService.update(temp);
+        if(row>0){
+            str=row.toString();
+        }
+        return str;
+    }
+
+    /*检查原密码*/
+    @ResponseBody
+    @RequestMapping(value = "/user/checkPassWord")
+    public String checkPassWord(@RequestBody UserInform userInform,HttpServletRequest request, HttpServletResponse response) {
+
+        String str="error";
+        Integer userId=(int)((UserInform) request.getSession().getAttribute("userInform")).getId();
+
+        UserInform temp=new UserInform();
+        temp.setId(userId);
+        temp.setPassword(userInform.getPassword());
+
+        Integer row=userInformService.select(temp).size();
+        if(row>0){
+            str=row.toString();
+        }
+        return str;
+    }
+
+    /*更新用户密码*/
+    @ResponseBody
+    @RequestMapping(value = "/user/updataUserPassword")
+    public String userUpdataUserPassword(@RequestBody UserInform userInform,HttpServletRequest request, HttpServletResponse response)  {
+
+        String str="error";
+        Integer userId=(int)((UserInform) request.getSession().getAttribute("userInform")).getId();
+
+        UserInform temp=new UserInform();
+        temp.setId(userId);
+        temp.setPassword(userInform.getPassword());
+
+        Integer row=userInformService.update(temp);
+        if(row>0){
+            str=row.toString();
+        }
+        return str;
+    }
+
+
+    /*重置用户密码*/
+    @ResponseBody
+    @RequestMapping(value = "/updataUserPassword")
+    public String updataUserPassword(@RequestBody UserInform userInform) {
+
+        String str="error";
+        UserInform pojo=new UserInform();
+        pojo.setName(userInform.getName());
+        pojo.setEmailAddress(userInform.getEmailAddress());
+
+        //查询用户的id
+        List<UserInform> userInformList=userInformService.select(pojo);
+
+        Integer userId=(int)userInformList.get(0).getId();
+        UserInform temp=new UserInform();
+        temp.setId(userId);
+        temp.setPassword(userInform.getPassword());
+
+        Integer row=userInformService.update(temp);
+        if(row>0){
+            str=row.toString();
+        }
+        return str;
+    }
+
     /*更新用户信息*/
     @ResponseBody
     @RequestMapping(value = "/admin/updateUserInfrom")
     public String updateUserInfrom(@RequestBody UserInform userInform) {
 
         String str="error";
+
         //执行sql语句
         int row=userInformService.update(userInform);
         if(row>0) {
@@ -113,6 +258,8 @@ public class UserInformController {
         }
             return str;
     }
+
+
 
     /*获取每个用户的登录信息和游戏次数*/
     public void setUserLoginInform_GameNum_winningRate(List<UserInform> userInformList){

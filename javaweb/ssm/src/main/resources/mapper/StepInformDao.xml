@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinesechess.mapper.StepInformDao">
+
+<!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.chinesechess.pojo.StepInform">
+        <result column="id" property="id"/>
+        <result column="game_id" property="gameId"/>
+        <result column="step_num" property="stepNum"/>
+        <result column="chess_num" property="chessNum"/>
+        <result column="point_x" property="pointX"/>
+        <result column="point_y" property="pointY"/>
+    </resultMap>
+
+<!--auto generated Code-->
+    <sql id="all_column">
+        id,
+        game_id,
+        step_num,
+        chess_num,
+        point_x,
+        point_y
+    </sql>
+
+<!--auto generated Code-->
+    <insert id="insert">
+        INSERT INTO step_inform
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != null"> id, </if>
+            <if test="pojo.gameId != null"> game_id, </if>
+            <if test="pojo.stepNum != null"> step_num, </if>
+            <if test="pojo.chessNum != null"> chess_num, </if>
+            <if test="pojo.pointX != null"> point_x, </if>
+            <if test="pojo.pointY != null"> point_y, </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != null"> #{pojo.id}, </if>
+            <if test="pojo.gameId != null"> #{pojo.gameId}, </if>
+            <if test="pojo.stepNum != null"> #{pojo.stepNum}, </if>
+            <if test="pojo.chessNum != null"> #{pojo.chessNum}, </if>
+            <if test="pojo.pointX != null"> #{pojo.pointX}, </if>
+            <if test="pojo.pointY != null"> #{pojo.pointY}, </if>
+        </trim>
+    </insert>
+
+<!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO step_inform(
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.gameId},
+            #{pojo.stepNum},
+            #{pojo.chessNum},
+            #{pojo.pointX},
+            #{pojo.pointY}
+            )
+        </foreach>
+    </insert>
+
+<!--auto generated Code-->
+    <update id="update">
+        UPDATE step_inform
+        <set>
+            <if test="pojo.id != null"> id = #{pojo.id}, </if>
+            <if test="pojo.gameId != null"> game_id = #{pojo.gameId}, </if>
+            <if test="pojo.stepNum != null"> step_num = #{pojo.stepNum}, </if>
+            <if test="pojo.chessNum != null"> chess_num = #{pojo.chessNum}, </if>
+            <if test="pojo.pointX != null"> point_x = #{pojo.pointX}, </if>
+            <if test="pojo.pointY != null"> point_y = #{pojo.pointY} </if>
+        </set>
+         WHERE id = #{pojo.id}
+    </update>
+
+<!--auto generated Code-->
+    <select id="select" resultMap="AllColumnMap">
+        SELECT <include refid="all_column"/>
+        FROM step_inform
+        <where>
+            <if test="pojo.id != null"> AND id = #{pojo.id} </if>
+            <if test="pojo.gameId != null"> AND game_id = #{pojo.gameId} </if>
+            <if test="pojo.stepNum != null"> AND step_num = #{pojo.stepNum} </if>
+            <if test="pojo.chessNum != null"> AND chess_num = #{pojo.chessNum} </if>
+            <if test="pojo.pointX != null"> AND point_x = #{pojo.pointX} </if>
+            <if test="pojo.pointY != null"> AND point_y = #{pojo.pointY} </if>
+        </where>
+        LIMIT 1000 
+    </select>
+
+<!--auto generated Code-->
+    <delete id="delete">
+        DELETE FROM step_inform where id = #{pojo.id}
+    </delete>
+</mapper>

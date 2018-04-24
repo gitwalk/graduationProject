@@ -10,7 +10,7 @@ import animate from 'animate.css'
 import  Velocity from 'velocity-animate'
 import {format,formatDuring} from "../static/js/timeTool.js"
 import {pagesHelp,updataInform,UserserInform,LoginAxios} from "../static/js/pagesHelp.js"
-
+import '../static/icon/iconfont.css'
 
 
 axios.defaults.withCredentials=true;

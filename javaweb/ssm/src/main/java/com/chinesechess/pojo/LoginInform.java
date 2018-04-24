@@ -21,6 +21,17 @@ public class LoginInform implements Comparable<LoginInform>{
   //用户此次在线的时间长
   private double time=-1;
 
+  @Override
+  public String toString() {
+    return "LoginInform{" +
+            "id=" + id +
+            ", userId=" + userId +
+            ", loginIp='" + loginIp + '\'' +
+            ", loginTime=" + loginTime +
+            ", logoutTime=" + logoutTime +
+            ", time=" + time +
+            '}';
+  }
 
   public long getId() {
     return id;

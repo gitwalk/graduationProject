@@ -31,15 +31,15 @@
     <update id="update">
         UPDATE user_inform
         <set>
-            <if test="pojo.name != null"> name = #{pojo.name}, </if>
-            <if test="pojo.password != null"> password = #{pojo.password}, </if>
-            <if test="pojo.emailAddress != null"> email_address = #{pojo.emailAddress}, </if>
+            <if test="pojo.name != null and pojo.name != ''"> name = #{pojo.name}, </if>
+            <if test="pojo.password != null and pojo.password != ''"> password = #{pojo.password}, </if>
+            <if test="pojo.emailAddress != null and pojo.emailAddress != ''"> email_address = #{pojo.emailAddress}, </if>
             <if test="pojo.role != -1"> role = #{pojo.role}, </if>
             <if test="pojo.sex != -1"> sex = #{pojo.sex}, </if>
-            <if test="pojo.registerTime != null"> register_time = #{pojo.registerTime}, </if>
+            <if test="pojo.registerTime != null and pojo.registerTime != ''"> register_time = #{pojo.registerTime}, </if>
             <if test="pojo.isDeleted != -1"> is_deleted = #{pojo.isDeleted} </if>
         </set>
-         WHERE id = #{pojo.id}
+        WHERE id = #{pojo.id}
     </update>
 
 <!--auto generated Code-->
@@ -62,4 +62,48 @@
     </select>
 
 
+    <insert id="insert">
+        INSERT INTO user_inform
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != -1" > id, </if>
+            <if test="pojo.name != null and pojo.name != ''"> name, </if>
+            <if test="pojo.password != null and pojo.password != ''"> password, </if>
+            <if test="pojo.emailAddress != null and pojo.emailAddress != ''"> email_address, </if>
+            <if test="pojo.role != -1"> role, </if>
+            <if test="pojo.sex != -1"> sex, </if>
+            <if test="pojo.registerTime != null and pojo.registerTime != ''"> register_time, </if>
+            <if test="pojo.isDeleted != -1"> is_deleted, </if>
+
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != -1"> #{pojo.id}, </if>
+            <if test="pojo.name != null and pojo.name != ''"> #{pojo.name}, </if>
+            <if test="pojo.password != null and pojo.password != ''"> #{pojo.password}, </if>
+            <if test="pojo.emailAddress != null and pojo.emailAddress != ''"> #{pojo.emailAddress}, </if>
+            <if test="pojo.role != -1"> #{pojo.role}, </if>
+            <if test="pojo.sex != -1"> #{pojo.sex}, </if>
+            <if test="pojo.registerTime != null and pojo.registerTime != ''"> #{pojo.registerTime}, </if>
+            <if test="pojo.isDeleted != -1"> #{pojo.isDeleted}, </if>
+
+        </trim>
+    </insert>
+    <insert id="insertList">
+        INSERT INTO user_inform(
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.name},
+            #{pojo.password},
+            #{pojo.emailAddress},
+            #{pojo.role},
+            #{pojo.sex},
+            #{pojo.registerTime},
+            #{pojo.isDeleted}
+
+            )
+        </foreach>
+    </insert>
 </mapper>

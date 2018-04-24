@@ -36,6 +36,7 @@ public class GameInform {
   private UserInform blackUserInform=null;
   //游戏时长
   private long gameTime=0;
+
   //页面的分页信息
   private Page page = null;
   //搜索时的开始和结束时间

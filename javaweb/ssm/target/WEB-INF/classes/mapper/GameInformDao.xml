@@ -84,7 +84,6 @@
     <update id="update">
         UPDATE game_inform
         <set>
-            <if test="pojo.id != -1"> id = #{pojo.id}, </if>
             <if test="pojo.redUserId != -1"> red_user_id = #{pojo.redUserId}, </if>
             <if test="pojo.blackUserId != -1"> black_user_id = #{pojo.blackUserId}, </if>
             <if test="pojo.startTime != null"> start_time = #{pojo.startTime}, </if>

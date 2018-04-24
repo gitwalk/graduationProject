@@ -22,7 +22,11 @@ public class WebSocketInterceptor implements HandshakeInterceptor {
             System.out.println("--------------beforeHandshake");
             System.out.println("++++++++++++:"+request.getURI());
             if (session != null) {
-                map.put("userId", session.getAttribute("userId"));
+                System.out.println("++++++++++++:"+session.getId());
+                if(session.getAttribute("olduserInform")!=null)
+                    map.put("olduserInform", session.getAttribute("olduserInform"));
+                if(session.getAttribute("userInform")!=null)
+                    map.put("userInform", session.getAttribute("userInform"));
             }
 
         }

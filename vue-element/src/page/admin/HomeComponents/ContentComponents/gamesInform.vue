@@ -1,7 +1,7 @@
 
 //对局信息查看
 <template>
-  <div style="height:603.6px;width: 1266px">
+  <div class="gamesInform" style="height:603.6px;width: 1266px">
     <!----------------------------------导航栏--------------------------------------------------------------------->
     <el-breadcrumb separator-class="el-icon-arrow-right" style="font-size:15px;" >
       <el-breadcrumb-item :to="{ path: '/gamesInform' }">
@@ -73,19 +73,31 @@
                           :total="pagesInform.pagetotal" ></el-pagination>
       </el-col>
     </el-row>
+    <el-dialog
+      title="回放"
+      :visible.sync="dialogTableVisible.data1"
 
+      top="0"
+      :before-close="handleClose">
+      <re-play ></re-play>
+
+
+    </el-dialog>
   </div>
 </template>
 
 <script>
+    import RePlay from "../../../user/chessComponets/rePlay";
     export default {
         name: "games-inform",
+      components: {RePlay},
       mounted(){
         /*初始化页面用户信息*/
         this.$pagesHelp(this,7,1,"/admin/listGameInform","dealGameInfom");
       },
       data() {
         return {
+          dialogTableVisible: this.BoardValue.dialogTableVisible,
           results:[],
           pickerdata:[],
           dynamicValidateForm: {
@@ -94,6 +106,7 @@
             endStarTime:'',
             page:''
           },
+          rePlayInform:[],
           gameInform:[],
           pagesInform:[],
           pickerOptions2: {
@@ -130,12 +143,51 @@
         }
       },
       methods: {
+        handleClose(done) {
+          this.$confirm('确认关闭？')
+            .then(_ => {
+              done();
+            })
+            .catch(_ => {});
+        },
         /*分页点击事件*/
         handleCurrentChange(val){
           this.$UserserInform(val,this,"/admin/GameInform","dealGameInfom");
         },
         handleEdit(index, row) {
-          console.log(index, row);
+          let thisVue=this;
+          var jsonData = JSON.stringify(row.id);
+          this.$axios({
+            method: 'post',
+            headers: {
+              'Content-Type': 'application/json;charset=UTF-8',
+
+            },
+            url: '/ssm/admin/rePlay',//listUserInform
+            withCredentials : true,
+            data: jsonData,
+          }).then(function (response) {
+            if(response.data==""){
+              thisVue.$alert('请重新登录', '消息', {
+                confirmButtonText: '确定',
+                callback: action => {
+                  thisVue.$router.push('/gamePlay');
+                }
+              });
+            }
+            else if(response.data!="error"){
+              thisVue.BoardValue.imgarrys.splice(0,thisVue.BoardValue.imgarrys.length);//清空数组
+
+              thisVue.BoardValue.dialogTableVisible.data1 = true;
+              thisVue.BoardValue.rePlayInform.gameInform=row;
+              thisVue.BoardValue.rePlayInform.stepInform=response.data;
+
+              console.log(index, thisVue.rePlayInform);
+            }
+          })
+            .catch(function (error) {
+              console.log(error);
+            });
         },
         handleDelete(index, row) {
           console.log(index, row);
@@ -169,6 +221,19 @@
     }
 </script>
 
-<style scoped>
+<style >
+
+  .gamesInform>.el-dialog__wrapper>.el-dialog>.el-dialog__body{
+    background-color:transparent ;
+    padding: 0;
+  }
+  .gamesInform>.el-dialog__wrapper>.el-dialog{
+    background-color:transparent ;
+    margin-left: 100px;
+    margin-bottom: 0;
+  }
+  .gamesInform>.el-dialog__wrapper>.el-dialog>.el-dialog__header{
+    display:none;
+  }
 
 </style>

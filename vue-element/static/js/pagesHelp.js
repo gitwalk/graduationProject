@@ -27,7 +27,8 @@ export function pagesHelp(thisVue,count,PageNum1,api,callback) {
   }).then(function (response) {
    if(response.data=="") {
      outInform(thisVue);
-    }else{
+    }
+    else{
      if(callback=="dealInfom") {
        dealInfom(thisVue,response);
      }else if(callback=="dealUserLoginInfom"){
@@ -211,6 +212,14 @@ function adminLogin(response,thisVue) {
 
 function dealGameInfom(thisVue,response) {
   for(var i in response.data[0]) {
+    if (response.data[0][i].startTime == response.data[0][i].endTime) {
+      response.data[0].splice(i, 1);
+
+    }
+  }
+
+  for(var i in response.data[0]) {
+
     response.data[0][i].gameTime=thisVue.$formatDuring(response.data[0][i].gameTime);
     response.data[0][i].setStepTime=thisVue.$formatDuring(response.data[0][i].setStepTime);
     response.data[0][i].setTime=thisVue.$formatDuring(response.data[0][i].setTime);

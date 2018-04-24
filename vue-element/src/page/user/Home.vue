@@ -23,6 +23,50 @@
 
     export default {
         name: "Home",
+      methods:{
+        outInform(response){
+          if(response.data==""){
+
+            this.$alert('请重新登录', '消息', {
+              confirmButtonText: '确定',
+              callback: action => {
+                this.$router.push('/gamePlay');
+              }
+            });
+          }
+        },
+        togameLobby(){
+          var jsonData = JSON.stringify( this.BoardValue.onlineUser);
+          var vum=this;
+          this.$axios({
+            method: 'post',
+            headers: {
+              'Content-Type': 'application/json;charset=UTF-8',
+            },
+
+            withCredentials : true,
+            url: '/ssm/user/togameLobby',//listUserInform
+            data: jsonData,
+          }).then(function (response) {
+
+            // vum.outInform(response);
+          })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+      },
+      created(){
+
+        this.BoardValue.ws = new WebSocket("ws://127.0.0.1:8081/ssm/myHandler");
+        this.BoardValue.ws.onclose = function () {
+          // alert("自动关闭了");
+        }
+        if(this.$route.path!='/gameLobby'){
+          this.togameLobby();
+        }
+
+      },
       components:{
         Uheader
       }

@@ -7,6 +7,9 @@ import com.chinesechess.pojo.UserInform;
 public interface UserInformDao {
 
 
+    int insert(@Param("pojo") UserInform pojo);
+
+    int insertList(@Param("pojos") List< UserInform> pojo);
 
     List<UserInform> select(@Param("pojo") UserInform pojo);
 

@@ -7,144 +7,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3086a0fc-9033-48a7-b659-a5012e112e3b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ssm_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ssm_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/67e804e4-ccd8-4ebd-87b8-569ed010c5d9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/67e804e4-ccd8-4ebd-87b8-569ed010c5d9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_44.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_44.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_web_2_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_web_2_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/Filter/SimpleCORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/Filter/SimpleCORSFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/AdminInformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/AdminInformController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/SocketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/UserInformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/UserInformController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/TestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/TestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/AdminInform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/AdminInform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/WebSocketInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/WebSocketInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/UserInformDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/UserInformDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/GameInform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/GameInform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/LoginInform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/LoginInform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/SessionInform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/SessionInform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/StepInform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/StepInform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/UserInform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/UserInform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/service/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/service/TestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/service/impl/TestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/service/impl/TestServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/util/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/util/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/util/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/util/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinesechess/service/UserInformService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinesechess/service/UserInformService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springMVC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springMVC.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/listTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/listTest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/submit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/submit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/getMany.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/getMany.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/getOne.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/getOne.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ssm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/Test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/GameInformDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/GameInformDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserInformDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserInformDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/Handler/MyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/Handler/MyHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/controller/GameInformController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/controller/GameInformController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/controller/SocketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/controller/SocketController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/controller/UserInformController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/controller/UserInformController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/interceptor/WebSocketInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/interceptor/WebSocketInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/mapper/UserInformDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/mapper/UserInformDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/pojo/GameInform.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/pojo/GameInform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/pojo/LoginInform.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/pojo/LoginInform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/pojo/StepInform.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/pojo/StepInform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/service/UserInformService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/chinesechess/service/UserInformService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/mapper/GameInformDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/mapper/GameInformDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/mapper/UserInformDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/mapper/UserInformDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/springMVC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/springMVC.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/Handler/MyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/Handler/MyHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/controller/GameInformController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/controller/GameInformController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/controller/SocketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/controller/SocketController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/controller/UserInformController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/controller/UserInformController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/interceptor/WebSocketInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/interceptor/WebSocketInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/mapper/UserInformDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/mapper/UserInformDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/pojo/GameInform.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/pojo/GameInform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/pojo/LoginInform.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/pojo/LoginInform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/pojo/StepInform.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/pojo/StepInform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinesechess/service/UserInformService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinesechess/service/UserInformService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/GameInformDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/GameInformDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserInformDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserInformDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/springMVC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springMVC.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/Filter/SimpleCORSFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/controller/AdminInformController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/controller/GameInformController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/controller/UserInformController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/interceptor/LoginInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/mapper/AdminInformDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/mapper/GameInformDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/mapper/LoginInformDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/mapper/TestMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/mapper/UserInformDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/pojo/AdminInform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/pojo/GameInform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/pojo/LoginInform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/pojo/SessionInform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/pojo/StepInform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/pojo/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/pojo/UserInform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/service/AdminInformService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/service/GameInformService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/service/LoginInformService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/service/TestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/service/UserInformService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/service/impl/TestServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/util/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/util/Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/log4j2.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/mapper/AdminInformDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/mapper/GameInformDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/mapper/LoginInformDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/mapper/Test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/mapper/UserInformDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/springMVC.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/jsp/listTest.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/jsp/submit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/fastjson-1.2.44.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.9.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.9.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.9.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/jsqlparser-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/log4j-api-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/log4j-core-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/log4j-web-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/mybatis-3.4.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.45.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/pagehelper-5.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/spring-context-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/spring-core-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/spring-jcl-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/spring-web-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/lib/standard-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/getMany.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/getOne.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue-element/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue-element/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../vue-element/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/admin/HomeComponents/ContentComponents/adminAccountmanage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/admin/HomeComponents/ContentComponents/adminAccountmanage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/admin/HomeComponents/ContentComponents/gamesInform.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/admin/HomeComponents/ContentComponents/gamesInform.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/admin/HomeComponents/ContentComponents/userAccountmanage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/admin/HomeComponents/ContentComponents/userAccountmanage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/admin/HomeComponents/ContentComponents/userInformstatistics.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/admin/HomeComponents/ContentComponents/userInformstatistics.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/admin/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/admin/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue-element/src/router/routers.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/router/routers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue-element/static/css/component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/static/css/component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue-element/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/MComponets/Record.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/MComponets/Record.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/MComponets/gameLobby.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/MComponets/gameLobby.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/MComponets/userInform.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/MComponets/userInform.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/Uheader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/Uheader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/chessComponets/chatboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/chessComponets/chatboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/chessComponets/chessboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/chessComponets/chessboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/chessComponets/imgzi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/chessComponets/imgzi.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/chessComponets/qi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/chessComponets/qi.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/chessComponets/userCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/chessComponets/userCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/chessPlay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/chessPlay.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/src/page/user/gamePlay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/src/page/user/gamePlay.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/static/img/login.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/static/js/chessBoardValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/static/js/chessBoardValue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue-element/static/js/pagesHelp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue-element/static/js/pagesHelp.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -161,9 +85,11 @@
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -188,8 +114,26 @@
       <file leaf-file-name="SocketController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/SocketController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="5300">
+              <caret line="212" selection-start-line="211" selection-start-column="7" selection-end-line="212" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInformController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/UserInformController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="200" column="134" selection-start-line="200" selection-start-column="134" selection-end-line="200" selection-end-column="134" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameInformController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="117" column="17" lean-forward="true" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,20 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminInformController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/AdminInformController.java">
+      <file leaf-file-name="MyHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
-              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSocketInterceptor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/WebSocketInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="139">
+              <caret line="579" selection-start-line="579" selection-end-line="579" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -218,73 +153,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.class" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/pojo/Test.class">
+      <file leaf-file-name="UserInform.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/UserInform.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-302">
-              <folding>
-                <element signature="e#0#602#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="125">
+              <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Page.class" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/util/Page.class">
+      <file leaf-file-name="OnlineUser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/util/OnlineUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <folding>
-                <element signature="e#0#1189#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestService.class" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/service/TestService.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
-              <folding>
-                <element signature="e#0#256#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocketController.class" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/controller/SocketController.class">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="springMVC.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/WEB-INF/classes/springMVC.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="48" column="43" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSocketConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/Config/WebSocketConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestController.class" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/controller/TestController.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="38" column="33" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#2370#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-275">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -302,10 +184,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>spring</find>
-      <find>starTime</find>
-      <find>page</find>
-      <find>javax.servlet</find>
+      <find>users.remove</find>
+      <find>buildRoom</find>
+      <find>rea</find>
+      <find>read</find>
+      <find>dea</find>
+      <find>roomuser</find>
+      <find>roomuse</find>
+      <find>gameResult</find>
+      <find>for</find>
+      <find>roomuserout</find>
+      <find>for(</find>
+      <find>buil</find>
+      <find>gameInform</find>
+      <find>setTime</find>
+      <find>userR</find>
+      <find>removeU</find>
+      <find>gameInformService</find>
+      <find>togameLobby</find>
+      <find>removeUser</find>
+      <find>dealGameInfom</find>
+      <find>listGameInform</find>
+      <find>logoutAdminInfrom</find>
+      <find>/admin/GameInform</find>
+      <find>remove</find>
+      <find>ready</find>
+      <find>remov</find>
+      <find>退出</find>
+      <find>handleTextMessage</find>
+      <find>count</find>
+      <find>userGameInform</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -314,57 +222,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/user/mapper/Test.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/user/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/admin/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/TestMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/Test.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/UserInformDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/UserInformService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/service/impl/UserInformService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/UserInformDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/service/UserInformService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/log4j2.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j2.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/util/Action.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/listTest.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/UserInformConttroller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/service/AdminInformService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/AdminInformDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/util/Page.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/LoginInformDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/service/LoginInformService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/AdminInform.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/SessionInform.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/StepInform.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/LoginInformDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/GameInformDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/service/GameInformService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/UserInform.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserInformDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/LoginInform.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/GameInform.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/GameInformDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/ Filter.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/Filter/SimpleCORSFilter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/UserInformController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/AdminInformDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/AdminInformController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/SpringWebSocketHandlerInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/Config/MyHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/SystemWebSocketHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/springMVC.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/Config/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/messageInform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/RoomInfomr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/LoginInform.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/WebSocketInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/OnlineUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/Chessman.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/GameInform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/SubmitStep.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/timeThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/TimeInfom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/TimeThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/MessageInform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/SessionInform.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/service/SessionInformService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/StepInform.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/RoomInform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/StepInform.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/GameInformDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/util/RoomInform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/util/MessageInform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/util/TimeInfom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springMVC.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/AdminInformController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/service/UserInformService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/UserInformDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserInformDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/SocketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/UserInformController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java" />
       </list>
     </option>
   </component>
@@ -389,7 +297,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-240" />
     <option name="y" value="80" />
     <option name="width" value="1935" />
@@ -403,9 +311,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -446,15 +353,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="chinesechess" type="462c0819:PsiDirectoryNode" />
-              <item name="Config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinesechess" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -473,19 +371,35 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="chinesechess" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/chinesechess/pojo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -862,6 +776,20 @@
       <workItem from="1523351511181" duration="118000" />
       <workItem from="1523351701922" duration="13125000" />
       <workItem from="1523365315708" duration="5731000" />
+      <workItem from="1523378657297" duration="6000" />
+      <workItem from="1523416007976" duration="37322000" />
+      <workItem from="1523503863861" duration="41843000" />
+      <workItem from="1523587264444" duration="15440000" />
+      <workItem from="1523672227457" duration="21157000" />
+      <workItem from="1523760979626" duration="18909000" />
+      <workItem from="1523847663014" duration="20973000" />
+      <workItem from="1523930660775" duration="13041000" />
+      <workItem from="1523976402239" duration="620000" />
+      <workItem from="1524025338102" duration="4374000" />
+      <workItem from="1524117062741" duration="3899000" />
+      <workItem from="1524295810830" duration="9150000" />
+      <workItem from="1524363680201" duration="15236000" />
+      <workItem from="1524547171970" duration="6241000" />
     </task>
     <servers />
   </component>
@@ -874,7 +802,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157849000" />
+    <option name="totallyTimeSpent" value="366060000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -886,33 +814,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50215983" side_tool="true" weight="0.25087926" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.2969169" side_tool="true" weight="0.35948646" />
       <window_info anchor="bottom" id="Application Servers" order="8" weight="0.2853067" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="7" />
-      <window_info anchor="right" id="Database" order="4" weight="0.19276458" />
+      <window_info anchor="right" id="Database" order="4" weight="0.19235925" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49784017" weight="0.4436519" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49731904" weight="0.33095577" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.24964337" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info id="Image Layers" order="4" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32942554" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32942554" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32947463" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.8031384" />
-      <window_info anchor="bottom" id="Spring" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23391421" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32947463" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7030831" visible="true" weight="0.7132668" />
+      <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21447721" />
       <window_info id="Web" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32947463" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -920,6 +848,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32947463" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -933,13 +862,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java</url>
-          <line>70</line>
+          <line>183</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java</url>
-          <line>97</line>
+          <line>210</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
@@ -962,383 +891,414 @@
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/AdminInformController.java</url>
-          <line>135</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java</url>
+          <line>180</line>
           <properties />
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="206" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java</url>
-          <line>27</line>
+          <line>189</line>
           <properties />
-          <option name="timeStamp" value="41" />
+          <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/WebSocketInterceptor.java</url>
-          <line>23</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java</url>
+          <line>246</line>
           <properties />
-          <option name="timeStamp" value="43" />
+          <option name="timeStamp" value="213" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/WebSocketInterceptor.java</url>
-          <line>24</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/UserInformController.java</url>
+          <line>156</line>
           <properties />
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="234" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/SocketController.java</url>
-          <line>28</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java</url>
+          <line>129</line>
           <properties />
-          <option name="timeStamp" value="46" />
+          <option name="timeStamp" value="245" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java</url>
+          <line>135</line>
+          <properties />
+          <option name="timeStamp" value="246" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java</url>
+          <line>140</line>
+          <properties />
+          <option name="timeStamp" value="247" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java</url>
+          <line>585</line>
+          <properties />
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java</url>
+          <line>579</line>
+          <properties />
+          <option name="timeStamp" value="260" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="47" />
+      <option name="time" value="261" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Develop Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46128">
-          <caret line="1584" column="16" selection-start-line="1584" selection-start-column="16" selection-end-line="1584" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/service/LoginInformService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Develop Program Files/Java/jdk-9.0.1/lib/src.zip!/java.sql/java/sql/Timestamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="149" column="16" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/service/UserInformService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserInformDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="57" column="11" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="57" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/LoginInform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Develop Program Files/Java/jdk-9.0.1/lib/src.zip!/java.desktop/java/awt/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/GameInform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/GameInformDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/ Filter.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/UserInform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="29" column="30" selection-start-line="27" selection-start-column="2" selection-end-line="29" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="349">
           <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/UserInformController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="100" column="35" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/AdminInform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/service/AdminInformService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AdminInformDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/SystemWebSocketHandler.java" />
-    <entry file="jar://D:/maven/repository/org/springframework/spring-websocket/5.0.5.RELEASE/spring-websocket-5.0.5.RELEASE.jar!/org/springframework/web/socket/WebSocketHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-841">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven/repository/org/springframework/spring-websocket/5.0.5.RELEASE/spring-websocket-5.0.5.RELEASE.jar!/org/springframework/web/socket/WebSocketSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Develop Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="241" column="8" selection-start-line="241" selection-start-column="8" selection-end-line="241" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/Filter/SimpleCORSFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2183">
-          <caret line="121" column="62" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springMVC.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="154" column="28" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/interceptor/WebSocketInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/Config/WebSocketConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/interceptor/WebSocketInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="23" column="67" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/ssmMavenTest1-1.0-SNAPSHOT/WEB-INF/classes/com/chinesechess/Config/WebSocketConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#1004#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/getOne.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/WEB-INF/jsp/listTest.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/WEB-INF/classes/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1249" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/getMany.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/interceptor/LoginInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-702" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/mapper/TestMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
-          <folding>
-            <element signature="e#0#380#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/util/Action.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#357#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/util/Page.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <folding>
-            <element signature="e#0#1189#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/service/TestService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <folding>
-            <element signature="e#0#256#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/controller/TestController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="38" column="33" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#2370#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/WEB-INF/classes/springMVC.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/Config/WebSocketConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="60" />
+        <state relative-caret-position="271">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/controller/SocketController.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/chinesechess/pojo/Test.class">
+    <entry file="jar://D:/maven/repository/org/springframework/spring-websocket/5.0.5.RELEASE/spring-websocket-5.0.5.RELEASE.jar!/org/springframework/web/socket/TextMessage.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-302">
-          <folding>
-            <element signature="e#0#602#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-167">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/AdminInformController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        <state relative-caret-position="75">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/SocketController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/LoginInform.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1625">
+          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/repository/org/springframework/spring-websocket/5.0.5.RELEASE/spring-websocket-5.0.5.RELEASE.jar!/org/springframework/web/socket/WebSocketSession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/SessionInform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/AdminInform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-117">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/WebSocketInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="300">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/Filter/SimpleCORSFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/util/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-772">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/util/RoomInform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/util/Chessman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/util/MessageInform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/util/SubmitStep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/util/TimeInfom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/util/TimeThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/util/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1139" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/springMVC.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="60" column="58" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="35" column="65" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="174" column="16" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="503" column="17" selection-start-line="503" selection-start-column="17" selection-end-line="503" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="1444" column="28" selection-start-line="1444" selection-start-column="28" selection-end-line="1444" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/GameInform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/StepInform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/service/LoginInformService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/AdminInformDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="60" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/service/SessionInformService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/service/StepInformService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/StepInformDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/SessionInformDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/service/UserInformService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/mapper/UserInformDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Develop Program Files/Java/jdk-9.0.1/lib/src.zip!/java.sql/java/sql/Timestamp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="428" column="15" selection-start-line="428" selection-start-column="15" selection-end-line="428" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/AdminInformController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/service/GameInformService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AdminInformDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-404" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/LoginInformDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SessionInformDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StepInformDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-179" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserInformDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1971">
+          <caret line="98" column="29" lean-forward="true" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/GameInformDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/SocketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5300">
+          <caret line="212" selection-start-line="211" selection-start-column="7" selection-end-line="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/UserInformController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="200" column="134" selection-start-line="200" selection-start-column="134" selection-end-line="200" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/controller/GameInformController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="117" column="17" lean-forward="true" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/pojo/UserInform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/util/OnlineUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-275">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinesechess/Handler/MyHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="579" selection-start-line="579" selection-end-line="579" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

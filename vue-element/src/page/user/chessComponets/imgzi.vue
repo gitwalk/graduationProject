@@ -93,7 +93,9 @@
         },500);
         setTimeout(function () {
           vum.isexit=false;
+
         },1000);
+
 
     }
     ,

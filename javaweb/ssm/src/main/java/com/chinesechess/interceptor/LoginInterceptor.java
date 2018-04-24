@@ -31,7 +31,8 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 
         System.out.println("拦截器中的session的id是====" + session.getId());
         Object obj = session.getAttribute("admin");
-        if(obj!=null){
+        Object obj1=session.getAttribute("userInform");
+        if(obj!=null||obj1!=null){
             System.out.println("preHandle(), 在访问Controller之前被调用");
             return true;
         }

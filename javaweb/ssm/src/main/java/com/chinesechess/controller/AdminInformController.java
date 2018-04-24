@@ -146,7 +146,7 @@ public class AdminInformController {
         return str;
     }
 
-    /*登录设置session*/
+    /*退出登录设置session*/
     @ResponseBody
     @RequestMapping(value = "/admin/logoutAdminInfrom")
     public String logoutAdminInfrom( HttpServletRequest request,

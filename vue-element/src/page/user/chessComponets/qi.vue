@@ -34,32 +34,39 @@
     props:['chessnum'],
     methods:{
       chooseChess(){
-        if((this.mapinf.isRed&&this.chessman.num%2!=0)||(!this.mapinf.isRed&&this.chessman.num%2==0)){
-          console.log(this.mapinf.isRed+" num:"+this.chessman.num);
-          var num= this.BoardValue.mapinf.chooseman;
-          if(num>0){
-            this.BoardValue.mapinf.chessmans[num].isflash=false;
-          }
-          this.BoardValue.mapinf.chooseman=this.chessnum;
+        if(this.BoardValue.onlineUser.userState!=5&&this.BoardValue.onlineUser.userState!=6) return;
+        if((this.mapinf.userisRed&&this.mapinf.isRed&&this.chessman.num%2!=0)||
+          (!this.mapinf.userisRed&&!this.mapinf.isRed&&this.chessman.num%2==0)){
+          if((this.mapinf.isRed&&this.chessman.num%2!=0)||(!this.mapinf.isRed&&this.chessman.num%2==0)){
 
-          this.BoardValue.mapinf.chessmans[this.chessnum].isflash=true;
-          let audioSelect = document.getElementById('audioSelect');
-          audioSelect.play();
-        }
-        else if((this.mapinf.isRed&&this.chessman.num%2==0)||(!this.mapinf.isRed&&this.chessman.num%2!=0)){
+            var num= this.BoardValue.mapinf.chooseman;
+            if(num>0){
+              this.BoardValue.mapinf.chessmans[num].isflash=false;
+            }
+            this.BoardValue.mapinf.chooseman=this.chessnum;
 
-          if(this.BoardValue.mapinf.chooseman!=-1){//如果符合规则
-            let x=this.chessman.x;
-            let y=this.chessman.y;
-            let num=this.BoardValue.mapinf.chooseman;
-            if(this.mapinf.isOK(num,x,y)){
+            this.BoardValue.mapinf.chessmans[this.chessnum].isflash=true;
+            let audioSelect = document.getElementById('audioSelect');
+            audioSelect.play();
+          }}
+          //如果选择的棋子不是我方棋子，则判断是否可以吃棋
+          else if((this.mapinf.isRed&&this.chessman.num%2==0)
+                  ||(!this.mapinf.isRed&&this.chessman.num%2!=0)){
 
-              // this.chessman.isexit=false;
-              this.mapinf.setXY(num,x,y);
+            if(this.BoardValue.mapinf.chooseman!=-1){//如果符合规则
+              let x=this.chessman.x;
+              let y=this.chessman.y;
+              let num=this.BoardValue.mapinf.chooseman;
+              if(this.mapinf.isOK(num,x,y)){
 
+                // this.chessman.isexit=false;
+                this.mapinf.setXY(num,x,y);
+
+              }
             }
           }
-        }
+
+
 
 
       }

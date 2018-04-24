@@ -1,59 +1,38 @@
 <template>
-
-
-
-   <!-- <div class="chessBox" style="margin-top: 70px">
-      <div class="chess">
-        <div class="chess1 mu div2" style=" background-image: url(../../../static/img/1/116.png);">
-          <div class="chess1 zi div3" ></div>
-        </div>
-        &lt;!&ndash;<div class="chess1 huan div4" ></div>&ndash;&gt;
-      </div>
-      <div class="chess1 shader div5" ></div>
-    </div>
-
-    <div class="chessBox" style="margin-left: 75px">
-      <div class="chess">
-        <div class="chess1 mu div2" style=" background-image: url(../../../static/img/1/111.png);">
-          <div class="chess1 zi div3" ></div>
-        </div>
-        &lt;!&ndash;<div class="chess1 huan div4" ></div>&ndash;&gt;
-      </div>
-      <div class="chess1 shader div5" ></div>
-    </div>
-    <div class="chessBox" style="margin-left: 140px">
-      <div class="chess">
-        <div class="chess1 mu div2" style=" background-image: url(../../../static/img/1/115.png);">
-          <div class="chess1 zi div3" ></div>
-        </div>
-        &lt;!&ndash;<div class="chess1 huan div4" ></div>&ndash;&gt;
-      </div>
-      <div class="chess1 shader div5" ></div>
-    </div>
-
-    <div class="chessBox" style="margin-left: 75px;margin-top: 70px">
-      <div class="chess">
-        <div class="chess1 mu div2" style=" background-image: url(../../../static/img/1/19.png);">
-          <div class="chess1 zi div3" ></div>
-        </div>
-        &lt;!&ndash;<div class="chess1 huan div4" ></div>&ndash;&gt;
-      </div>
-      <div class="chess1 shader div5" ></div>
-    </div>-->
-<div>
-  </div>
-
-
-
-
-
-
-
+ <div>
+    <chatboard  :contextitems="items"></chatboard>
+ </div>
 </template>
 
 <script>
+
+    import Chatboard from "./chessComponets/chatboard";
     export default {
-        name: "login"
+        name: "login",
+      components: {Chatboard},
+      data(){
+        return{
+          items:[]
+        }
+      },
+      mounted(){
+          let thisvue=this;
+          // var ws = new WebSocket("ws://127.0.0.1:8081/ssm/myHandler");
+          //   ws.onopen = function () {
+          //     console.log("onpen");
+          //     ws.send("大家好");
+          //   }
+          //   ws.onclose = function () {
+          //     console.log("onclose");
+          //   }
+          //
+          //   ws.onmessage = function (msg) {
+          //     var obj = eval('(' +  msg.data + ')');
+          //     console.log(obj);
+          //     thisvue.items.push(obj);
+          //
+          //   }
+      }
     }
 </script>
 

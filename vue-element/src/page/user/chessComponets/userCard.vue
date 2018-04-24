@@ -6,7 +6,7 @@
         <span>{{ready}}</span>
       </div>
       <div class="text item">
-        {{'昵称： ' + username }}
+        {{'昵称： ' + uusername }}
       </div>
       <div class="text item">
         {{'步时： ' + steptime1 }}
@@ -34,8 +34,20 @@
        }
      },
      computed:{
+          uusername(){
+            if(this.username==null){
+              return ""
+            }
+            else {
+              return this.username;
+            }
+          }
+          ,
        ready(){
-         if(this.username==""){
+         if(this.username==null){
+
+           return "未加入"
+         }else if(this.username==""){
             return "未加入"
          }
          return (this.isReady?"已准备":"未准备");

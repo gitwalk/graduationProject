@@ -13,13 +13,17 @@ public class UserInformService {
     @Resource
     private UserInformDao userInformDao;
 
-    //查询UserInform表的所有信息
+
     public List<UserInform> select(UserInform pojo){
         return userInformDao.select(pojo);
     }
 
     public int update(UserInform pojo){
         return userInformDao.update(pojo);
+    }
+
+    public int insert(UserInform pojo){
+        return userInformDao.insert(pojo);
     }
 
 }

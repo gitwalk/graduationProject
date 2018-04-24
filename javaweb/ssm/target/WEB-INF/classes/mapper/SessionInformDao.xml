@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinesechess.mapper.SessionInformDao">
+
+<!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.chinesechess.pojo.SessionInform">
+        <result column="id" property="id"/>
+        <result column="game_id" property="gameId"/>
+        <result column="send_time" property="sendTime"/>
+        <result column="send_user_id" property="sendUserId"/>
+        <result column="receive_user_id" property="receiveUserId"/>
+        <result column="context" property="context"/>
+    </resultMap>
+
+<!--auto generated Code-->
+    <sql id="all_column">
+        id,
+        game_id,
+        send_time,
+        send_user_id,
+        receive_user_id,
+        context
+    </sql>
+
+<!--auto generated Code-->
+    <insert id="insert">
+        INSERT INTO session_inform
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != null"> id, </if>
+            <if test="pojo.gameId != null"> game_id, </if>
+            <if test="pojo.sendTime != null"> send_time, </if>
+            <if test="pojo.sendUserId != null"> send_user_id, </if>
+            <if test="pojo.receiveUserId != null"> receive_user_id, </if>
+            <if test="pojo.context != null"> context, </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != null"> #{pojo.id}, </if>
+            <if test="pojo.gameId != null"> #{pojo.gameId}, </if>
+            <if test="pojo.sendTime != null"> #{pojo.sendTime}, </if>
+            <if test="pojo.sendUserId != null"> #{pojo.sendUserId}, </if>
+            <if test="pojo.receiveUserId != null"> #{pojo.receiveUserId}, </if>
+            <if test="pojo.context != null"> #{pojo.context}, </if>
+        </trim>
+    </insert>
+
+<!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO session_inform(
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.gameId},
+            #{pojo.sendTime},
+            #{pojo.sendUserId},
+            #{pojo.receiveUserId},
+            #{pojo.context}
+            )
+        </foreach>
+    </insert>
+
+<!--auto generated Code-->
+    <update id="update">
+        UPDATE session_inform
+        <set>
+            <if test="pojo.id != null"> id = #{pojo.id}, </if>
+            <if test="pojo.gameId != null"> game_id = #{pojo.gameId}, </if>
+            <if test="pojo.sendTime != null"> send_time = #{pojo.sendTime}, </if>
+            <if test="pojo.sendUserId != null"> send_user_id = #{pojo.sendUserId}, </if>
+            <if test="pojo.receiveUserId != null"> receive_user_id = #{pojo.receiveUserId}, </if>
+            <if test="pojo.context != null"> context = #{pojo.context} </if>
+        </set>
+         WHERE id = #{pojo.id}
+    </update>
+
+<!--auto generated Code-->
+    <select id="select" resultMap="AllColumnMap">
+        SELECT <include refid="all_column"/>
+        FROM session_inform
+        <where>
+            <if test="pojo.id != null"> AND id = #{pojo.id} </if>
+            <if test="pojo.gameId != null"> AND game_id = #{pojo.gameId} </if>
+            <if test="pojo.sendTime != null"> AND send_time = #{pojo.sendTime} </if>
+            <if test="pojo.sendUserId != null"> AND send_user_id = #{pojo.sendUserId} </if>
+            <if test="pojo.receiveUserId != null"> AND receive_user_id = #{pojo.receiveUserId} </if>
+            <if test="pojo.context != null"> AND context = #{pojo.context} </if>
+        </where>
+        LIMIT 1000 
+    </select>
+
+<!--auto generated Code-->
+    <delete id="delete">
+        DELETE FROM session_inform where id = #{pojo.id}
+    </delete>
+</mapper>

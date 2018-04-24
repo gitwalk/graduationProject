@@ -27,6 +27,9 @@
     <audio id="audioEat"
            src="../../../../static/audios/eat.mp3">
     </audio>
+    <audio id="audioOver"
+           src="../../../../static/audios/gamewin.mp3">
+    </audio>
   </div>
 
 </template>
@@ -69,8 +72,6 @@
         }
       },
       components: {Imgzi, GuangDian, Qi, Rbing}
-
-
     }
 </script>
 
