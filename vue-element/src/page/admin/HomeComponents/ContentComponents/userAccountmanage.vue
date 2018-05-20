@@ -41,13 +41,13 @@
 
 <!--------------------------------------------表格------------------------------------------------------------------->
   <el-table :data="listInform1" style="width: 90%;margin-left: 5%;height:70%;">
-    <el-table-column label="注册日期" width="190px" align="center">
+    <el-table-column label="注册日期" width="235px" align="center">
       <template slot-scope="scope">
         <i class="el-icon-time"></i>
         <span style="margin-left: 10px"> {{ scope.row.registerTime }}</span>
       </template>
     </el-table-column>
-    <el-table-column label="账号" width="180px" align="center">
+    <el-table-column label="账号" width="225px" align="center">
       <template slot-scope="scope">
         <el-popover trigger="hover" placement="top">
           <p>性别: {{ scope.row.sex }}</p>
@@ -60,13 +60,13 @@
         </el-popover>
       </template>
     </el-table-column>
-    <el-table-column label="密码" width="180px" >
-      <template slot-scope="scope">{{scope.row.password}}</template>
-    </el-table-column>
-    <el-table-column label="电子邮件" width="180px" >
+    <!--<el-table-column label="密码" width="180px" >-->
+      <!--<template slot-scope="scope">{{scope.row.password}}</template>-->
+    <!--</el-table-column>-->
+    <el-table-column label="电子邮件" width="225px"  align="center">
       <template slot-scope="scope">{{scope.row.emailAddress}}</template>
     </el-table-column>
-    <el-table-column label="用户状态" width="180px" align="center">
+    <el-table-column label="用户状态" width="225px" align="center">
       <template slot-scope="scope">{{scope.row.isDeleted}}</template>
     </el-table-column>
     <el-table-column label="操作" align="center">

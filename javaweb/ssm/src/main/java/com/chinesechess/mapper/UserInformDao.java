@@ -13,6 +13,8 @@ public interface UserInformDao {
 
     List<UserInform> select(@Param("pojo") UserInform pojo);
 
+    List<UserInform> selectF(@Param("pojo") UserInform pojo);
+
     int update(@Param("pojo") UserInform pojo);
 
 }

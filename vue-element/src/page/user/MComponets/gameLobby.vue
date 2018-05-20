@@ -282,7 +282,7 @@
         inite(){
           let vum=this;
           vum.togameLobby();
-          // var ws = new WebSocket("ws://127.0.0.1:8081/ssm/myHandler");
+
           vum.BoardValue.ws.onmessage = function (msg) {
 
             let str= msg.data.split("|");

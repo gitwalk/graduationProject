@@ -2,11 +2,17 @@ var path = require('path')
 var webpack = require('webpack')
 var proxy = require('http-proxy-middleware')
 
+let ipdata='127.0.0.1:8081'
+// let ipdata='111.230.95.219:8081'
+
+
+
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
+    // publicPath: './dist/',
     publicPath: '/dist/',
     filename: 'build.js'
   },
@@ -69,7 +75,7 @@ module.exports = {
      host: '127.0.0.1',
     proxy: {
       '/ssm': {
-        target: 'http://127.0.0.1:8081/',
+        target: 'http://'+ipdata+'/',
         changeOrigin: true,
         secure: false
       }

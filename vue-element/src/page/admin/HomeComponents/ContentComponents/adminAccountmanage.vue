@@ -35,27 +35,27 @@
     </el-form>
     <!--------------------------------------------表格------------------------------------------------------------------->
     <el-table :data="listInform1" style="width: 90%;height:70%;margin-left: 5%" >
-      <el-table-column label="注册日期" width="190px">
+      <el-table-column label="注册日期" width="235px">
         <template slot-scope="scope">
           <i class="el-icon-time"></i>
           <span style="margin-left: 10px">{{ scope.row.registerTime }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="账号" width="180px" align="center">
+      <el-table-column label="账号" width="225px" align="center">
         <template slot-scope="scope">
             <div slot="reference" class="name-wrapper">
               <el-tag size="medium">{{ scope.row.name }}</el-tag>
             </div>
         </template>
       </el-table-column>
-      <el-table-column label="真实姓名" width="180px" align="center">
+      <el-table-column label="真实姓名" width="225px" align="center">
         <template slot-scope="scope">{{scope.row.realName}}</template>
       </el-table-column>
-      <el-table-column label="密码" width="180px" >
-        <template slot-scope="scope">{{scope.row.password}}</template>
-      </el-table-column>
+      <!--<el-table-column label="密码" width="180px" >-->
+        <!--<template slot-scope="scope">{{scope.row.password}}</template>-->
+      <!--</el-table-column>-->
 
-      <el-table-column label="账号状态" width="180px" align="center">
+      <el-table-column label="账号状态" width="225px" align="center">
         <template slot-scope="scope">{{scope.row.isDeleted}}</template>
       </el-table-column>
       <el-table-column label="操作" align="center">

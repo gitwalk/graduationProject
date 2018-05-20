@@ -1,8 +1,11 @@
 package com.chinesechess.Filter;
 
+import org.springframework.http.server.ServletServerHttpRequest;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class SimpleCORSFilter implements Filter {
@@ -17,6 +20,8 @@ public class SimpleCORSFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
         if (isCross) {
+
+
             HttpServletRequest httpServletRequest = (HttpServletRequest) request;
             HttpServletResponse httpServletResponse = (HttpServletResponse) response;
             System.out.println("拦截请求: " + httpServletRequest.getServletPath());

@@ -18,6 +18,10 @@ public class UserInformService {
         return userInformDao.select(pojo);
     }
 
+    public List<UserInform> selectF(UserInform pojo){
+        return userInformDao.selectF(pojo);
+    }
+
     public int update(UserInform pojo){
         return userInformDao.update(pojo);
     }

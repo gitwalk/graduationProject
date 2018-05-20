@@ -35,7 +35,7 @@
 </template>
 
 <script>
-    import Rbing from "./rbing";
+
     import Qi from "./qi";
     import GuangDian from "./guangDian";
     import Imgzi from "./imgzi";
@@ -60,8 +60,8 @@
             var y=(event.offsetY-4)/68;
             x=parseInt(x);
             y=parseInt(y);
-            console.log("X 坐标: " + event.offsetX + ", Y 坐标: " + event.offsetY);
-            console.log("X 坐标: " + x + ", Y 坐标: " + y);
+            // console.log("X 坐标: " + event.offsetX + ", Y 坐标: " + event.offsetY);
+            // console.log("X 坐标: " + x + ", Y 坐标: " + y);
             if(x>8||y>9||x<0||y<0) return;
 
             this.BoardValue.mapinf.chooseman=-1;
@@ -71,7 +71,7 @@
           }
         }
       },
-      components: {Imgzi, GuangDian, Qi, Rbing}
+      components: {Imgzi, GuangDian, Qi}
     }
 </script>
 

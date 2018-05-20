@@ -17,21 +17,7 @@
       },
       mounted(){
           let thisvue=this;
-          // var ws = new WebSocket("ws://127.0.0.1:8081/ssm/myHandler");
-          //   ws.onopen = function () {
-          //     console.log("onpen");
-          //     ws.send("大家好");
-          //   }
-          //   ws.onclose = function () {
-          //     console.log("onclose");
-          //   }
-          //
-          //   ws.onmessage = function (msg) {
-          //     var obj = eval('(' +  msg.data + ')');
-          //     console.log(obj);
-          //     thisvue.items.push(obj);
-          //
-          //   }
+
       }
     }
 </script>

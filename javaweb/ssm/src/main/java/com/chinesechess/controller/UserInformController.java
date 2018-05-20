@@ -152,7 +152,7 @@ public class UserInformController {
 
         String str="error";
         //执行sql语句
-        Integer row=userInformService.select(userInform).size();
+        Integer row=userInformService.selectF(userInform).size();
 
         return row.toString();
     }

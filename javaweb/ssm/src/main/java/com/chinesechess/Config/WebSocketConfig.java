@@ -18,7 +18,6 @@ public class WebSocketConfig implements WebSocketConfigurer {
         registry.addHandler(new MyHandler(), "/myHandler")
                 .addInterceptors(new WebSocketInterceptor())
                 .setAllowedOrigins("*");
-
     }
 
 

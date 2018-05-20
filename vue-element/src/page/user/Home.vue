@@ -58,7 +58,11 @@
       },
       created(){
 
-        this.BoardValue.ws = new WebSocket("ws://127.0.0.1:8081/ssm/myHandler");
+        this.BoardValue.ws = new WebSocket("ws://"+this.Ipaddress.ipdata+"/ssm/myHandler");
+        this.BoardValue.ws.onopen=function () {
+          console.log("连接打开");
+
+        }
         this.BoardValue.ws.onclose = function () {
           // alert("自动关闭了");
         }

@@ -27,13 +27,13 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
         response.setHeader("Access-Control-Allow-Headers", "X-Requested-With, accept, content-type, xxxx");
         response.setHeader("Access-Control-Allow-Methods", "GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH");
         response.setHeader("Access-Control-Allow-Credentials", "true");
-        response.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:8080");
+        response.setHeader("Access-Control-Allow-Origin", "*");
 
-        System.out.println("拦截器中的session的id是====" + session.getId());
+        System.out.println("admin拦截器中的session的id是====" + session.getId());
         Object obj = session.getAttribute("admin");
-        Object obj1=session.getAttribute("userInform");
-        if(obj!=null||obj1!=null){
-            System.out.println("preHandle(), 在访问Controller之前被调用");
+
+        if(obj!=null){
+            System.out.println("adminpreHandle(), 在访问Controller之前被调用");
             return true;
         }
         return false;

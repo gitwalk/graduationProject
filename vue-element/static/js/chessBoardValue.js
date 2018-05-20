@@ -250,6 +250,24 @@ mapinf.isJiangjun=function(isRed){//isRed表示某一方，判断isRed是否将�
   return false;
 
 }
+
+//预设象棋的局面，用于回放选择步骤
+mapinf.setXYInform=function(i,x,y){
+  let nowchessNum=ans[x][y];
+  let beforex=this.chessmans[i].x;
+  let beforey=this.chessmans[i].y;
+  this.chessmans[i].setXY(x,y);//设置当前棋子的位置
+  this.ans[beforex][beforey]=0;//修改map的信息
+  this.ans[x][y]=i;
+  if(nowchessNum>0){
+    this.chessmans[nowchessNum].isexit=false;
+  }
+  this.diannum=beforey*9+beforex+1;
+  this.chooseman=-1;//设置当前没有被选中任何棋子
+  this.guangnum=i;//设置当前光圈所在的棋子位置
+
+}
+
 mapinf.setXY=function (i,x,y) {//移动棋子
   if(i>0){
     if(!this.isOK(i,x,y)){//判断当前棋子移动是否合法
@@ -452,9 +470,7 @@ mapinf.isJueSha=function(isRed){//判断isREd是否有棋可走
 
     }
   }
-
 return false;
-
 
 }
 
@@ -806,10 +822,7 @@ mapinf.xiang=function (nowX,nowY,x,y,shuaiChess) {//相的规则
     }
 
   }
-
-
   return false;
-
 }
 
 mapinf.shi=function (nowX,nowY,x,y,shuaiChess) {//士的规则
@@ -859,8 +872,11 @@ mapinf.shuai=function (nowX,nowY,x,y,othershuaiChess) {//帅的规则
 mapinf.setInf=function(data){
 
 
-  onlineUser.userState=data.onlineUserList[onlineUser.userInform.id].userState;
-  onlineUser.roomId=data.onlineUserList[onlineUser.userInform.id].roomId;
+  if(onlineUser.userInform.id!=null){
+    onlineUser.userState=data.onlineUserList[onlineUser.userInform.id].userState;
+    onlineUser.roomId=data.onlineUserList[onlineUser.userInform.id].roomId;
+  }
+
   mapinf.onlineUserList=data.onlineUserList;
 
   mapinf.roomId=data.roomId;
@@ -915,24 +931,6 @@ mapinf.setInf=function(data){
 
 }
 
-
-
-
-//
-// $(document).ready(function(){
-//   $.ajax({
-//     type: "post",
-//     url: "http://127.0.0.1:8081/ssm/getuserInform",
-//     headers: {
-//       'Content-Type': 'application/json;charset=UTF-8',
-//     },
-//     withCredentials : true,
-//     dataType: "json",
-//     success: function(data){
-//       console.log(data);
-//     }
-//   });
-// });
 var dialogTableVisible=new Object();
 dialogTableVisible.data=false;
 dialogTableVisible.data1=false

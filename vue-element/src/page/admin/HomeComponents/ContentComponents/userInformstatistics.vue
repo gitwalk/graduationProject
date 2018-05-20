@@ -33,7 +33,7 @@
         </el-table>
       </template>
     </el-table-column>
-    <el-table-column label="用户账号" width="180px" align="center">
+    <el-table-column label="用户账号" width="200px" align="center">
       <template slot-scope="scope">
         <div slot="reference" class="name-wrapper">
           <el-tag size="medium">{{ scope.row.name }}</el-tag>
@@ -41,10 +41,10 @@
       </template>
     </el-table-column>
     <!--<el-table-column label="用户账号" prop="name"></el-table-column>-->
-    <el-table-column label="总在线时间" prop="allLoginTime"></el-table-column>
-    <el-table-column label="对局次数" prop="gameNum"></el-table-column>
-    <el-table-column label="登录次数" prop="loginNum"></el-table-column>
-    <el-table-column label="胜率" prop="winningRate"></el-table-column>
+    <el-table-column label="总在线时间" prop="allLoginTime"  align="center"></el-table-column>
+    <el-table-column label="对局次数" prop="gameNum"  align="center"></el-table-column>
+    <el-table-column label="登录次数" prop="loginNum"  align="center"></el-table-column>
+    <el-table-column label="胜率" prop="winningRate"  align="center"></el-table-column>
   </el-table>
     <!------------------------------------------------------分页条------------------------------------------------------>
     <el-row :gutter="24" style="margin-top: 2%">

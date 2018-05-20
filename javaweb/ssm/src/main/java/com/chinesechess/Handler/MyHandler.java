@@ -86,6 +86,7 @@ public class MyHandler extends TextWebSocketHandler {
            String str= JSONObject.toJSON(userInform).toString();
             //GameInformService temp=gameInformService;
             session.sendMessage(new TextMessage(str));
+
             System.out.println("用户的ID："+userId);
             System.out.println("用户的seeion："+session);
         }
@@ -474,44 +475,6 @@ public class MyHandler extends TextWebSocketHandler {
         Integer userId=(int)onlineUser.getUserInform().getId();
 
         Integer oldroomId=onlineUser.getRoomId();
-        //如果该用户是刷新用户
-//        OnlineUser outOnlineUser=outonlineUsers.get(userId);
-//
-//        if(outOnlineUser!=null&&outOnlineUser.getRoomId()==roomId){
-//            Integer stateNum=outOnlineUser.getUserState();
-//            if(rooms.get(roomId)==null&&outrooms.get(roomId)!=null) {
-//                rooms.put(roomId,outrooms.get(roomId));
-//                outrooms.remove(roomId);
-//
-//            }
-//            if(users.get(userId)==null&&outusers.get(userId)!=null){
-//                users.put(userId,outusers.get(userId));
-//                outusers.remove(userId);
-//            }
-//            if(stateNum==1||stateNum==5){//如果原来是红方
-//                rooms.get(roomId).setRedName(outOnlineUser.getUserInform().getName());
-//
-//            }
-//            else if(stateNum==2||stateNum==6){//如果原来是黑方
-//                rooms.get(roomId).setBlackName(outOnlineUser.getUserInform().getName());
-//
-//            }
-//
-//            rooms.get(roomId).getOnlineUserList().put(userId,outOnlineUser);
-//            onlineUsers.put(userId,outOnlineUser);
-//            outonlineUsers.remove(userId);
-//            String str=JSONObject.toJSON(rooms).toString();
-//            str+="|joingameLobby";
-//            //给所有用户广播更新当前大厅的信息
-//            this.sendMessageToAllUsers(new TextMessage(str));
-//            //给现在的房间广播
-//            if(rooms.get(roomId)!=null){
-//                String str3=JSONObject.toJSON(rooms.get(roomId)).toString();
-//                str3+="|roomuser";
-//                this.sendMessageToRoomAllUsers(roomId,new TextMessage(str3));
-//            }
-//            return true;
-//        }
         //如果该用户已经在对战中，则不能加入其它房间
         if(onlineUser.getUserState()==5||onlineUser.getUserState()==6){
             if(rooms.get(oldroomId).getRoomState()==1){

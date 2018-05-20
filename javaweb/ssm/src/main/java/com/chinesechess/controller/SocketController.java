@@ -60,13 +60,12 @@ public class SocketController {
 
         HttpSession session =request.getSession();
         UserInform userInform=(UserInform) session.getAttribute("userInform");
-//        if(userInform!=null){
-//            handler.removeUser((int)userInform.getId());
-//        }
 
         session.setAttribute("userInform", null);
         return "success";
     }
+
+
 
     //登录游戏
     @RequestMapping(value = "/loginUserInfrom")
@@ -80,7 +79,7 @@ public class SocketController {
 
         UserInform pojo=userInform;
 
-        List<UserInform> userInformList=userInformService.select(pojo);
+        List<UserInform> userInformList=userInformService.selectF(pojo);
 
         UserInform olduserInform=(UserInform) session.getAttribute("userInform");
 

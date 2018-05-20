@@ -27,6 +27,7 @@
                      allow-credentials="true" />
     </mvc:cors>
 
+    <!--<mvc:resources mapping="/dist/**" location="/vue" />-->
 
     <!--注解驱动，以使得访问路径与方法的匹配可以通过注解配置-->
     <mvc:annotation-driven >
@@ -58,7 +59,12 @@
         <mvc:interceptor>
             <mvc:mapping path="/user/**"/>
             <!-- 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 -->
-            <bean class="com.chinesechess.interceptor.LoginInterceptor"/>
+            <bean class="com.chinesechess.interceptor.userLoginInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/captcha/**"/>
+            <!-- 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 -->
+            <bean class="com.chinesechess.interceptor.CaptchaInterceptor" />
         </mvc:interceptor>
         <!-- 当设置多个拦截器时，先按顺序调用preHandle方法，然后逆序调用每个拦截器的postHandle和afterCompletion方法 -->
 

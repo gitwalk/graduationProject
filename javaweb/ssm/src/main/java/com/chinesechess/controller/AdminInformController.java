@@ -8,6 +8,7 @@ import com.chinesechess.service.AdminInformService;
 import com.chinesechess.util.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,6 +23,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+
+
+
 
 @Controller
 @CrossOrigin("http://127.0.0.1:8080")
@@ -126,12 +131,12 @@ public class AdminInformController {
     @ResponseBody
     @RequestMapping(value = "/loginAdminInfrom")
     public String loginAdminInfrom(@RequestBody AdminInform adminInform, HttpServletRequest request,
-                                   HttpServletResponse response, Object handler) {
+                                   HttpServletResponse response) {
 
         String str="error";
         HttpSession session =request.getSession();
         AdminInform pojo=adminInform;
-        List<AdminInform> adminInformList=adminInformService.select(pojo);
+        List<AdminInform> adminInformList=adminInformService.selectF(pojo);
         for(AdminInform ad:adminInformList){
             if(ad.getIsDeleted()==1){
                 return "disable";
@@ -168,7 +173,7 @@ public class AdminInformController {
 
         AdminInform pojo=new AdminInform();
         pojo.setName(adminInform.getName());
-        List<AdminInform> adminInformList=adminInformService.select(pojo);
+        List<AdminInform> adminInformList=adminInformService.selectF(pojo);
         if(adminInformList.size()==0){
             str="success";
         }
@@ -188,6 +193,8 @@ public class AdminInformController {
         Date date = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         pojo.setRegisterTime(simpleDateFormat.format(date));
+
+
         int row=adminInformService.insert(pojo);
         if(row>0){
             str="success";

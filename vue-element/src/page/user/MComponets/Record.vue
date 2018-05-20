@@ -12,9 +12,6 @@
         </el-date-picker>
       </el-form-item>
 
-      <!--<el-form-item>-->
-        <!--<el-button type="primary" @click="submitForm('dynamicValidateForm')">查询</el-button>-->
-      <!--</el-form-item>-->
     </el-form>
     <!--------------------------------------------表格------------------------------------------------------------------->
     <el-table
@@ -236,7 +233,7 @@
 
 
         }
-        console.log(thisVue.gameInform);
+        // console.log(thisVue.gameInform);
       },
       handleEdit(index, row) {
         let thisVue=this;
@@ -251,6 +248,7 @@
           withCredentials : true,
           data: jsonData,
         }).then(function (response) {
+          //console.log(response.data);
           if(response.data==""){
             thisVue.$alert('请重新登录', '消息', {
               confirmButtonText: '确定',
@@ -269,7 +267,16 @@
             thisVue.BoardValue.rePlayInform.gameInform=row;
             thisVue.BoardValue.rePlayInform.stepInform=response.data;
 
-            console.log(index, thisVue.rePlayInform);
+            // console.log(index, thisVue.rePlayInform);
+          }
+          else if(response.data=="error"){
+            thisVue.BoardValue.imgarrys.splice(0,thisVue.BoardValue.imgarrys.length);//清空数组
+
+            thisVue.BoardValue.dialogTableVisible.data1 = true;
+            thisVue.BoardValue.rePlayInform.gameInform=row;
+            thisVue.BoardValue.rePlayInform.stepInform=[];
+
+            // console.log(index, thisVue.rePlayInform);
           }
         })
           .catch(function (error) {

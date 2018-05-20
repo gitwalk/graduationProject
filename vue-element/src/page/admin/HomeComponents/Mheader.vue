@@ -2,11 +2,11 @@
 <template>
   <div>
     <h1 style="color: white;font-size:30px;margin: 0;padding-left: 20px"> 信息管理系统</h1>
-    <span style="color: white;font-size: 17px;margin-right: 0px;float: right">
-      权限:{{role}}
+    <span style="color: white;font-size: 17px;margin-right: 20px;float: right">
+     {{role}}
     </span>
     <el-dropdown style="color: white;font-size: 17px;float: right;margin-right: 20px" @command="handleCommand">
-    <span class="el-dropdown-link" >
+    <span class="el-dropdown-link" style="color: #2ae6d8">
       欢迎，{{dynamicValidateForm.name}}
     </span>
       <el-dropdown-menu slot="dropdown">
@@ -165,27 +165,35 @@
       return {
         rules2: {
           oldPassWord: [
-            { validator: validatePass, trigger: 'blur' }
+            { validator: validatePass, trigger: 'blur' },
+            { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' }
+
           ],
           passWord: [
-            { validator: validatePass2, trigger: 'blur' }
+            { validator: validatePass2, trigger: 'blur' },
+            { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' }
           ],
           checkPassword: [
-            { validator: validatePass3, trigger: 'blur' }
+            { validator: validatePass3, trigger: 'blur' },
+            { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' }
           ]
         },
         rules3: {
           name: [
-            { validator: validatePass4, trigger: 'blur' }
+            { validator: validatePass4, trigger: 'blur' },
+            { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' }
           ],
           realName: [
-            { validator: validatePass5, trigger: 'blur' }
+            { validator: validatePass5, trigger: 'blur' },
+            { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' }
           ],
           password: [
-            { validator: validatePass6, trigger: 'blur' }
+            { validator: validatePass6, trigger: 'blur' },
+            { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' }
           ],
           checkPassword: [
-            { validator: validatePass7, trigger: 'blur' }
+            { validator: validatePass7, trigger: 'blur' },
+            { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' }
           ]
         },
         dialogVisible1:false,

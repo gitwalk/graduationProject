@@ -11,6 +11,7 @@ public interface AdminInformDao {
     int insertList(@Param("pojos") List< AdminInform> pojo);
 
     List<AdminInform> select(@Param("pojo") AdminInform pojo);
+    List<AdminInform> selectF(@Param("pojo") AdminInform pojo);
 
     int update(@Param("pojo") AdminInform pojo);
 

@@ -108,12 +108,17 @@
           },
           rules2: {
             oldPassWord: [
+              { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' },
               { validator: validatePass, trigger: 'blur' }
+
             ],
             passWord: [
+              { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' },
               { validator: validatePass2, trigger: 'blur' }
+
             ],
             checkPassword: [
+              { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' },
               { validator: validatePass3, trigger: 'blur' }
             ]
           },
@@ -125,8 +130,8 @@
       },
       mounted(){
         this.activeIndex2=this.$route.path;
-          var thisVue=this;
-        this.$axios({
+        var thisVue=this;
+        thisVue.$axios({
           method: 'post',
           headers: {
             'Content-Type': 'application/json;charset=UTF-8',
@@ -134,8 +139,8 @@
           withCredentials : true,
           url: '/ssm/user/getuserInform',//listUserInform
         }).then(function (response) {
-            if(response.data!="error"){
-            console.log(response.data);
+          if(response.data!="error"){
+            // console.log(response.data);
             thisVue.BoardValue.onlineUser.userInform=response.data;
             thisVue.username=response.data.name;
           }

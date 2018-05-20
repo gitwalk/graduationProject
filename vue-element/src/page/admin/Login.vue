@@ -20,6 +20,18 @@
                 <input v-model.trim="dynamicValidateForm.password" class="text" style="color: #FFFFFF !important;" type="password" placeholder="请输入密码" />
               </el-form-item>
             </div>
+            <el-row style="height: 55px">
+              <el-col :span="12">
+                <div class="input_outer" >
+                  <el-form-item  prop="mark">
+                    <input v-model.trim="dynamicValidateForm.mark" class="text" style="margin-left:20%;width:100%;color: #FFFFFF !important;" type="text" placeholder="请输入验证码" />
+                  </el-form-item>
+                </div>
+              </el-col>
+              <el-col :span="9" :offset="2">
+                <mark-img></mark-img>
+              </el-col>
+            </el-row>
             <div class="mb2"><a @click="submitForm('dynamicValidateForm')" class="act-but submit"  style="color: #FFFFFF">登录</a></div>
           </el-form>
         </div>
@@ -34,31 +46,74 @@
    import "../../../static/js/rAF.js"
    import {demo1} from "../../../static/js/demo-1.js"
    import axios from 'axios';
+   import MarkImg from "../user/loginComponets/markImg";
 
    // var category={"name":"test","id":3};
    // var jsonData = JSON.stringify(category);
    export default {
+     components: {MarkImg},
      data() {
+       var checkMark1=(rule, value, callback) => {
+         let vm=this;
+         if(value === ''){
+           return callback(new Error('请输入验证码'));
+         }
+         else {
+           vm.checkMark(value,callback);
+         }
+
+       };
        return {
 
          dynamicValidateForm: {
            name:'',
            password:'',
-
+           mark:''
          },
          rules: {
            name: [
              { required: true, message: '请输入账号', trigger: 'blur' },
-             { min: 1, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+             { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' }
            ],
            password:[
              { required: true, message: '请输入密码', trigger: 'blur' },
-             { min: 1, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
-           ]
+             { min: 6, max: 13, message: '长度在 6 到 13 个字符', trigger: 'blur' }
+           ],
+           mark: [
+             { validator: checkMark1, trigger: 'blur' },
+
+           ],
          }
        }
      },
      methods: {
+       checkMark(data,callback){
+
+         this.$axios({
+           method: 'post',
+           headers: {
+             'Content-Type': 'application/json;charset=UTF-8',
+           },
+
+           withCredentials : true,
+           url: '/ssm/captcha/loginMark',//listUserInform
+           data: data,
+         }).then(function (response) {
+
+           if(response.data=="error"){
+
+             callback(new Error('验证码错误'));
+           }
+           else {
+             callback();
+           }
+
+         })
+           .catch(function (error) {
+             console.log(error);
+           });
+
+       },
        submitForm(formName) {
 
          this.$refs[formName].validate((valid) => {

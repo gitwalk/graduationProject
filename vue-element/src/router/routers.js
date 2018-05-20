@@ -23,10 +23,10 @@ export default new Router({
       path:'/user',//普通用户登录
       component:userLogin
     },
-    {
-      path: '/chessPlay',//对局房间
-      component:chessPlay
-    },
+    // {
+    //   path: '/chessPlay',//对局房间
+    //   component:chessPlay
+    // },
     {
       path:'/gamePlay',//普通用户登录
       component:gamePlay

@@ -23,6 +23,9 @@ public class AdminInformService {
     public List<AdminInform> select(AdminInform pojo){
         return adminInformDao.select(pojo);
     }
+    public List<AdminInform> selectF(AdminInform pojo){
+        return adminInformDao.selectF(pojo);
+    }
 
     public int update(AdminInform pojo){
         return adminInformDao.update(pojo);

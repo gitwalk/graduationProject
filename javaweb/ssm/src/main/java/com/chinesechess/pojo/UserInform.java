@@ -2,6 +2,7 @@ package com.chinesechess.pojo;
 
 
 import com.chinesechess.util.Page;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.Timestamp;
 import java.util.Date;
